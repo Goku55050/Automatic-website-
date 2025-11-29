@@ -2,40 +2,48 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Ares Anime – Hindi Dubbed Only</title>
+  <title>Ares Anime – Hindi Dubbed</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body data-page="home">
   <div class="stars-bg"></div>
 
-  <header class="site-header">
-    <div class="logo">Ares <span>Anime</span></div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="admin.html">Admin</a>
+  <header class="main-header">
+    <div class="logo">Ares Anime</div>
+    <nav class="nav">
+      <button id="browse-btn" class="btn-primary">Browse Anime</button>
     </nav>
   </header>
 
-  <main class="content">
-    <section class="hero">
-      <h1>Hindi Dubbed Anime Library</h1>
-      <p>Sirf Hindi Dubbed animes – JJK, Dandadan, Classroom of the Elite, MHA, Chainsaw Man aur aur bhi.</p>
-
-      <div class="search-box">
-        <input type="text" id="searchInput" placeholder="Search anime (Hindi dubbed)..." />
-      </div>
+  <main class="main-content">
+    <section class="search-section">
+      <input
+        id="search-input"
+        type="text"
+        placeholder="Search Hindi dubbed anime..."
+      />
     </section>
 
-    <section class="anime-grid" id="animeGrid">
-      <!-- JS will inject cards -->
+    <section class="anime-section">
+      <h1>Hindi Dubbed Anime Collection</h1>
+      <p class="subtitle">
+        Only Hindi dubbed animes • Stream & download via external links
+      </p>
+      <div id="anime-list" class="anime-grid">
+        <!-- Filled by script.js -->
+      </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <p>Ares Anime does not host or upload any videos. We only index publicly available third-party streaming links. All videos are hosted on external servers.</p>
+  <footer class="main-footer">
+    <p>
+      Ares Anime does not host or upload any videos. We only index publicly
+      available third-party streaming links. All videos are hosted on external
+      servers.
+    </p>
   </footer>
 
   <script src="script.js"></script>
 </body>
-        </html>
+</html>
