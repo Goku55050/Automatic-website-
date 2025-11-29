@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ares Admin – Manage Anime</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="admin">
+  <div class="stars-bg"></div>
+
+  <header class="site-header">
+    <div class="logo">Ares <span>Admin</span></div>
+    <nav>
+      <a href="index.html">Site</a>
+    </nav>
+  </header>
+
+  <main class="content admin-layout">
+    <section class="admin-panel">
+      <h1>Admin Panel (Local Only)</h1>
+      <p class="info-text small">
+        Ye panel sirf tumhare browser me data change karta hai.  
+        <b>Export JSON</b karo, phir <b>anime-data.json</b file ko GitHub repo me replace karke commit + push karo.
+      </p>
+
+      <div class="admin-login" id="adminLoginBox">
+        <label>Admin Password:</label>
+        <input type="password" id="adminPasswordInput" placeholder="aresadmin" />
+        <button id="adminLoginBtn">Login</button>
+        <p class="info-text small">Default password: <code>aresadmin</code> (tum .js me change kar sakte ho).</p>
+      </div>
+
+      <div id="adminContent" class="admin-content hidden">
+        <div class="admin-columns">
+          <!-- LEFT: anime list -->
+          <div class="admin-column">
+            <h2>Anime List</h2>
+            <select id="animeSelect" size="8"></select>
+            <button id="addAnimeBtn">+ Add Anime</button>
+            <button id="deleteAnimeBtn">Delete Anime</button>
+          </div>
+
+          <!-- MIDDLE: anime details + seasons -->
+          <div class="admin-column">
+            <h2>Anime Details</h2>
+            <label>Title (Hindi Dubbed):</label>
+            <input type="text" id="animeTitleInput" />
+
+            <label>Poster URL:</label>
+            <input type="text" id="animePosterInput" />
+
+            <label>Description:</label>
+            <textarea id="animeDescriptionInput" rows="4"></textarea>
+
+            <h3>Seasons</h3>
+            <select id="seasonSelectAdmin" size="5"></select>
+            <button id="addSeasonBtn">+ Add Season</button>
+            <button id="deleteSeasonBtn">Delete Season</button>
+
+            <label>Season Name:</label>
+            <input type="text" id="seasonNameInput" placeholder="Season 1 (Hindi Dubbed)" />
+          </div>
+
+          <!-- RIGHT: episodes -->
+          <div class="admin-column">
+            <h2>Episodes</h2>
+            <select id="episodeSelectAdmin" size="8"></select>
+            <button id="addEpisodeBtn">+ Add Episode</button>
+            <button id="deleteEpisodeBtn">Delete Episode</button>
+
+            <label>Episode Number:</label>
+            <input type="number" id="episodeNumberInput" min="1" />
+
+            <label>Episode Title:</label>
+            <input type="text" id="episodeTitleInput" />
+
+            <label>Stream URL (iframe):</label>
+            <input type="text" id="episodeStreamInput" placeholder="https://filemoon.sx/e/..." />
+
+            <label>Download URL:</label>
+            <input type="text" id="episodeDownloadInput" placeholder="https://filemoon.sx/e/..." />
+
+            <button id="saveEpisodeChangesBtn">Save Episode Changes</button>
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="admin-actions">
+          <h2>Export / Import</h2>
+          <button id="exportJsonBtn">Export anime-data.json</button>
+
+          <div>
+            <label>Import anime-data.json:</label>
+            <input type="file" id="importJsonInput" accept="application/json" />
+          </div>
+
+          <p class="info-text small">
+            Export se jo <b>anime-data.json</b milega use GitHub me upload karo (old file replace) → Vercel auto-deploy karega.  
+            Import se tum purani file ko browser me load karke edit kar sakte ho.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Ares Anime does not host or upload any videos. We only index publicly available third-party streaming links. All videos are hosted on external servers.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+  </html>
