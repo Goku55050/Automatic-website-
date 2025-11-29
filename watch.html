@@ -9,19 +9,19 @@
 <body data-page="watch">
   <div class="stars-bg"></div>
 
-  <header class="site-header">
-    <div class="logo">Ares <span>Anime</span></div>
-    <nav>
-      <a href="index.html">Home</a>
+  <header class="main-header">
+    <div class="logo">Ares Anime</div>
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Home</a>
     </nav>
   </header>
 
-  <main class="content narrow">
-    <h1 id="watchTitle">Loading...</h1>
+  <main class="main-content watch-page">
+    <h1 id="watch-title"></h1>
 
-    <!-- TOP BANNER AD -->
+    <!-- Top Ad (banner) -->
     <div class="ad-block ad-top">
-      <!-- Banner -->
+      <!-- BANNER AD CODE -->
       <script type="text/javascript">
         atOptions = {
           'key' : '1ca930ec4b20fce9334ce7973ff6dd40',
@@ -35,30 +35,37 @@
     </div>
 
     <div class="video-wrapper">
-      <iframe id="videoPlayer" src="" frameborder="0" allowfullscreen></iframe>
+      <iframe
+        id="video-player"
+        src=""
+        frameborder="0"
+        allowfullscreen
+        allow="autoplay"
+      ></iframe>
     </div>
 
     <div class="watch-controls">
-      <button id="prevEpisodeBtn">⟵ Previous Episode</button>
-      <button id="nextEpisodeBtn">Next Episode ⟶</button>
+      <button id="prev-ep" class="btn-secondary">⟵ Previous Episode</button>
+      <button id="next-ep" class="btn-secondary">Next Episode ⟶</button>
+      <a id="download-btn" class="btn-primary" href="#">Download Episode</a>
     </div>
 
-    <div class="watch-download">
-      <button id="downloadBtn">Download Episode</button>
-    </div>
-
-    <!-- BOTTOM NATIVE AD -->
+    <!-- Bottom Ad (native banner) -->
     <div class="ad-block ad-bottom">
-      <!-- Native banner -->
+      <!-- NATIVE BANNER AD CODE -->
       <script async="async" data-cfasync="false" src="//pl28156526.effectivegatecpm.com/9fdbf75c26ef51a2b19dbf748cf83bef/invoke.js"></script>
       <div id="container-9fdbf75c26ef51a2b19dbf748cf83bef"></div>
     </div>
   </main>
 
-  <footer class="site-footer">
-    <p>Ares Anime does not host or upload any videos. We only index publicly available third-party streaming links. All videos are hosted on external servers.</p>
+  <footer class="main-footer">
+    <p>
+      Ares Anime does not host or upload any videos. We only index publicly
+      available third-party streaming links. All videos are hosted on external
+      servers.
+    </p>
   </footer>
 
   <script src="script.js"></script>
 </body>
-  </html>
+                                  </html>
