@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body id="home" data-page="home">
-
   <div class="stars-bg"></div>
 
   <header class="main-header">
@@ -18,30 +17,62 @@
   </header>
 
   <main class="main-content">
-
+    <!-- SEARCH -->
     <section class="search-section">
       <input
         id="search-input"
         type="text"
         placeholder="Search Hindi dubbed anime..."
+        autocomplete="off"
       />
     </section>
 
+    <!-- TOP BANNER ADS -->
+    <section class="ads-section">
+      <!-- Banner Ad -->
+      <div class="ad-block">
+        <script type="text/javascript">
+          atOptions = {
+            'key' : '1ca930ec4b20fce9334ce7973ff6dd40',
+            'format' : 'iframe',
+            'height' : 250,
+            'width' : 300,
+            'params' : {}
+          };
+        </script>
+        <script type="text/javascript" src="//www.highperformanceformat.com/1ca930ec4b20fce9334ce7973ff6dd40/invoke.js"></script>
+      </div>
+
+      <!-- Native Banner Ad -->
+      <div class="ad-block">
+        <script async="async" data-cfasync="false" src="//pl28156526.effectivegatecpm.com/9fdbf75c26ef51a2b19dbf748cf83bef/invoke.js"></script>
+        <div id="container-9fdbf75c26ef51a2b19dbf748cf83bef"></div>
+      </div>
+    </section>
+
+    <!-- ANIME GRID -->
     <section class="anime-section">
       <div class="anime-section-header">
         <h1>Hindi Dubbed Anime Collection</h1>
-        <p class="subtitle">Only Hindi dubbed anime • Stream & download via external links</p>
+        <p class="subtitle">
+          Only Hindi dubbed anime • Stream & download via external links
+        </p>
       </div>
 
-      <div id="anime-grid" class="anime-grid"></div>
+      <div id="anime-grid" class="anime-grid">
+        <!-- Cards injected by script.js -->
+      </div>
     </section>
-
   </main>
 
   <footer class="main-footer">
-    Ares Anime does not host any videos. All videos are external links.
+    <p>
+      Ares Anime does not host or upload any videos. We only index publicly
+      available third-party streaming links. All videos are hosted on external
+      servers.
+    </p>
   </footer>
 
   <script src="script.js"></script>
 </body>
-</html>
+  </html>
