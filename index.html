@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body id="home" data-page="home">
+
   <div class="stars-bg"></div>
 
   <header class="main-header">
@@ -17,6 +18,7 @@
   </header>
 
   <main class="main-content">
+
     <section class="search-section">
       <input
         id="search-input"
@@ -26,22 +28,18 @@
     </section>
 
     <section class="anime-section">
-      <h1>Hindi Dubbed Anime Collection</h1>
-      <p class="subtitle">
-        Only Hindi dubbed animes • Stream & download via external links
-      </p>
-      <div id="anime-list" class="anime-grid">
-        <!-- Filled by script.js (renderHomePage) -->
+      <div class="anime-section-header">
+        <h1>Hindi Dubbed Anime Collection</h1>
+        <p class="subtitle">Only Hindi dubbed anime • Stream & download via external links</p>
       </div>
+
+      <div id="anime-grid" class="anime-grid"></div>
     </section>
+
   </main>
 
   <footer class="main-footer">
-    <p>
-      Ares Anime does not host or upload any videos. We only index publicly
-      available third-party streaming links. All videos are hosted on external
-      servers.
-    </p>
+    Ares Anime does not host any videos. All videos are external links.
   </footer>
 
   <script src="script.js"></script>
