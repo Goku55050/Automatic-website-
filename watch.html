@@ -3,70 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <title>Watch – Ares Anime</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body id="watch" data-page="watch">
   <div class="stars-bg"></div>
 
   <header class="main-header">
     <div class="logo">Ares Anime</div>
-    <nav class="nav">
-      <a href="index.html" class="nav-link">Home</a>
-    </nav>
+    <a href="index.html" class="nav-link">Home</a>
   </header>
 
-  <main class="main-content watch-page">
-    <h1 id="watch-title"></h1>
-    <p id="watch-ep-info" class="anime-meta"></p>
+  <main class="main-content watch-layout">
 
-    <!-- Top Ad (banner) -->
-    <div class="ad-block ad-top">
-      <!-- BANNER AD CODE -->
-      <script type="text/javascript">
-        atOptions = {
-          'key' : '1ca930ec4b20fce9334ce7973ff6dd40',
-          'format' : 'iframe',
-          'height' : 250,
-          'width' : 300,
-          'params' : {}
-        };
-      </script>
-      <script type="text/javascript" src="//www.highperformanceformat.com/1ca930ec4b20fce9334ce7973ff6dd40/invoke.js"></script>
+    <iframe id="video-player" allowfullscreen></iframe>
+
+    <div class="watch-meta">
+      <h1 id="watch-title"></h1>
+      <p id="watch-desc"></p>
     </div>
 
-    <div class="video-wrapper">
-      <iframe
-        id="video-player"
-        src=""
-        frameborder="0"
-        allowfullscreen
-        allow="autoplay"
-      ></iframe>
+    <!-- USER AUDIO SELECT -->
+    <div style="margin-top:12px;">
+      <label style="font-size:14px;">Audio Track:</label>
+      <select id="audio-select" class="btn-secondary" style="padding:6px 10px;"></select>
     </div>
 
     <div class="watch-controls">
-      <button id="btn-prev-ep" class="btn btn-secondary">⟵ Previous Episode</button>
-      <button id="btn-next-ep" class="btn btn-secondary">Next Episode ⟶</button>
-      <a id="btn-download" class="btn btn-primary" href="#">Download Episode</a>
+      <button id="download-btn" class="btn-primary">Download Episode</button>
+      <button id="open-externally-btn" class="btn-secondary">Open Player in Tab</button>
     </div>
 
-    <!-- Bottom Ad (native banner) -->
-    <div class="ad-block ad-bottom">
-      <!-- NATIVE BANNER AD CODE -->
-      <script async="async" data-cfasync="false" src="//pl28156526.effectivegatecpm.com/9fdbf75c26ef51a2b19dbf748cf83bef/invoke.js"></script>
-      <div id="container-9fdbf75c26ef51a2b19dbf748cf83bef"></div>
-    </div>
   </main>
 
-  <footer class="main-footer">
-    <p>
-      Ares Anime does not host or upload any videos. We only index publicly
-      available third-party streaming links. All videos are hosted on external
-      servers.
-    </p>
-  </footer>
+  <footer class="main-footer">All videos belong to their respective owners.</footer>
 
   <script src="script.js"></script>
 </body>
-  </html>
+</html>
