@@ -17,7 +17,8 @@
   --shadow-soft: 0 18px 40px rgba(0, 0, 0, 0.6);
 }
 
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -33,28 +34,35 @@ html, body {
   inset: 0;
   z-index: -2;
   background:
-    radial-gradient(2px 2px at 20% 20%, rgba(255,255,255,0.6), transparent),
-    radial-gradient(2px 2px at 80% 30%, rgba(255,255,255,0.5), transparent),
-    radial-gradient(2px 2px at 40% 80%, rgba(255,255,255,0.4), transparent),
-    radial-gradient(1px 1px at 10% 60%, rgba(255,255,255,0.4), transparent),
-    radial-gradient(1px 1px at 90% 70%, rgba(255,255,255,0.4), transparent);
+    radial-gradient(2px 2px at 20% 20%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(2px 2px at 80% 30%, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(2px 2px at 40% 80%, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(1px 1px at 10% 60%, rgba(255, 255, 255, 0.4), transparent),
+    radial-gradient(1px 1px at 90% 70%, rgba(255, 255, 255, 0.4), transparent);
   background-color: #020617;
   animation: starTwinkle 8s linear infinite alternate;
 }
 
 @keyframes starTwinkle {
-  0% { opacity: 0.5; transform: translateY(0); }
-  100% { opacity: 1; transform: translateY(-10px); }
+  0% {
+    opacity: 0.5;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
 }
 
-/* ========== Header ========== */
+/* ========== Layout ========== */
+
 .main-header {
   position: sticky;
   top: 0;
   z-index: 10;
   backdrop-filter: blur(18px);
-  background: linear-gradient(to right, rgba(15,23,42,0.92), rgba(24,24,48,0.92));
-  border-bottom: 1px solid rgba(148,163,184,0.2);
+  background: linear-gradient(to right, rgba(15, 23, 42, 0.92), rgba(24, 24, 48, 0.92));
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -70,16 +78,22 @@ html, body {
   color: transparent;
 }
 
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
 .nav-link {
   color: var(--text-muted);
   text-decoration: none;
   font-size: 0.9rem;
 }
+
 .nav-link:hover {
   color: var(--text-main);
 }
 
-/* ========== Main Layout ========== */
 .main-content {
   max-width: 1100px;
   margin: 18px auto 40px;
@@ -87,6 +101,7 @@ html, body {
 }
 
 /* ========== Buttons ========== */
+
 .btn-primary,
 .btn-secondary,
 .btn-ghost {
@@ -96,50 +111,100 @@ html, body {
   font-size: 0.95rem;
   padding: 9px 18px;
   font-weight: 600;
-  transition: 0.15s ease;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease,
+    color 0.15s ease;
 }
 
 .btn-primary {
   background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
   color: white;
-  box-shadow: 0 10px 25px rgba(79,70,229,0.5);
+  box-shadow: 0 10px 25px rgba(79, 70, 229, 0.5);
 }
+
 .btn-primary:hover {
-  transform: translateY(-1px) scale(1.02);
-  box-shadow: 0 18px 30px rgba(79,70,229,0.7);
+  transform: translateY(-1px);
+  box-shadow: 0 16px 35px rgba(79, 70, 229, 0.7);
 }
 
 .btn-secondary {
-  background: rgba(15,23,42,0.95);
+  background: rgba(15, 23, 42, 0.95);
   color: var(--text-main);
-  border: 1px solid rgba(148,163,184,0.5);
+  border: 1px solid rgba(148, 163, 184, 0.5);
 }
+
 .btn-secondary:hover {
-  background: rgba(30,64,175,0.9);
+  background: rgba(30, 64, 175, 0.9);
 }
 
 .btn-ghost {
   background: transparent;
   color: var(--text-muted);
 }
+
 .btn-ghost:hover {
-  background: rgba(15,23,42,0.9);
+  background: rgba(15, 23, 42, 0.9);
   color: var(--text-main);
 }
 
-/* ========== Search Bar ========== */
+/* ========== Search & Ads Section ========== */
+
+.search-section {
+  margin-top: 22px;
+  margin-bottom: 10px;
+}
+
 #search-input {
   width: 100%;
   padding: 14px 16px;
   border-radius: 999px;
-  border: 1px solid rgba(148,163,184,0.6);
-  background: rgba(15,23,42,0.85);
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  background: rgba(15, 23, 42, 0.85);
   color: var(--text-main);
   outline: none;
   font-size: 0.95rem;
+  box-shadow: 0 14px 35px rgba(15, 23, 42, 0.7);
 }
 
-/* ========== Anime Grid ========== */
+#search-input::placeholder {
+  color: #6b7280;
+}
+
+#search-input:focus {
+  border-color: var(--accent-purple);
+  box-shadow: 0 0 0 1px rgba(168, 85, 247, 0.8);
+}
+
+.ads-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 10px 0 18px;
+}
+
+.ad-block {
+  background: rgba(15, 23, 42, 0.95);
+  border-radius: 16px;
+  padding: 8px;
+  box-shadow: var(--shadow-soft);
+}
+
+/* ========== Anime List (Home) ========== */
+
+.anime-section-header {
+  margin: 8px 2px 14px;
+}
+
+.anime-section-header h1 {
+  margin: 0 0 6px;
+  font-size: 1.4rem;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
 .anime-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
@@ -148,71 +213,369 @@ html, body {
 }
 
 .anime-card {
-  background: rgba(15,23,42,0.98);
-  border-radius: 18px;
-  box-shadow: var(--shadow-soft);
+  position: relative;
   overflow: hidden;
-  transition: 0.18s ease;
+  border-radius: var(--card-radius);
+  background: radial-gradient(circle at top left, rgba(56, 189, 248, 0.25), transparent 50%),
+    radial-gradient(circle at bottom right, rgba(168, 85, 247, 0.18), transparent 50%),
+    rgba(15, 23, 42, 0.98);
+  box-shadow: var(--shadow-soft);
   cursor: pointer;
+  transform: translateY(0);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .anime-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-4px) scale(1.01);
+  box-shadow: 0 22px 50px rgba(15, 23, 42, 0.95);
 }
 
 .anime-poster-wrap {
-  max-height: 260px;
+  position: relative;
   overflow: hidden;
+  border-radius: 16px 16px 0 0;
+  max-height: 260px;
 }
 
 .anime-poster {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transform: scale(1.03);
+  transition: transform 0.25s ease;
 }
 
-/* small label */
+.anime-card:hover .anime-poster {
+  transform: scale(1.09);
+}
+
 .dub-pill {
   position: absolute;
-  bottom: 10px;
   left: 10px;
+  bottom: 10px;
   padding: 3px 9px;
   border-radius: 999px;
-  font-size: .72rem;
-  background: rgba(15,23,42,0.9);
-  border: 1px solid rgba(191,219,254,0.8);
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(191, 219, 254, 0.8);
 }
 
-/* ========== Episode Page ========== */
+.anime-info {
+  padding: 10px 12px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.anime-info h2 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.anime-desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.anime-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}
+
+/* ========== Episodes Page ========== */
+
+.detail-header {
+  display: flex;
+  gap: 18px;
+  margin-top: 16px;
+  margin-bottom: 18px;
+}
+
+.detail-poster {
+  width: 190px;
+  border-radius: 18px;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-soft);
+}
+
 .detail-poster img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.episode-list {
-  padding: 12px;
-  background: rgba(15,23,42,0.95);
-  border-radius: 18px;
+.detail-text {
+  flex: 1;
 }
 
-/* ========== Watch Page ========== */
+.detail-text h1 {
+  margin: 0 0 6px;
+  font-size: 1.35rem;
+}
+
+.detail-text p {
+  margin: 0 0 10px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.episode-list {
+  margin-top: 8px;
+  background: rgba(15, 23, 42, 0.96);
+  border-radius: 18px;
+  box-shadow: var(--shadow-soft);
+  padding: 10px 10px 4px;
+}
+
+.season-title {
+  font-size: 0.95rem;
+  margin: 8px 4px;
+  color: var(--text-main);
+}
+
+.episode-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 9px 10px;
+  border-radius: 12px;
+  margin-bottom: 6px;
+  background: rgba(17, 24, 39, 0.9);
+}
+
+.episode-row-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.episode-row-title {
+  font-size: 0.9rem;
+  margin-bottom: 2px;
+}
+
+.episode-row-sub {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+    }/* ========== Watch Page ========== */
+
+.watch-layout {
+  margin-top: 18px;
+}
+
 #video-player {
   width: 100%;
   height: 60vh;
   border-radius: 18px;
   border: none;
+  background: #020617;
+  box-shadow: var(--shadow-soft);
+}
+
+.watch-meta {
+  margin-top: 10px;
+}
+
+.watch-meta h1 {
+  margin: 0 0 6px;
+  font-size: 1.2rem;
+}
+
+.watch-meta p {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.watch-controls {
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.watch-controls .btn-primary {
+  margin-right: 6px;
+}
+
+/* ========== Download Page ========== */
+
+.download-box {
+  margin-top: 22px;
+  padding: 18px 16px;
+  border-radius: 18px;
+  background: rgba(15, 23, 42, 0.96);
+  box-shadow: var(--shadow-soft);
+}
+
+.download-box h1 {
+  margin-top: 0;
+}
+
+/* ========== Admin Page ========== */
+
+.admin-page {
+  margin-top: 18px;
+}
+
+.admin-note {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.admin-login {
+  margin-bottom: 18px;
+  padding: 14px 14px 12px;
+  border-radius: 16px;
+  background: rgba(15, 23, 42, 0.96);
+  box-shadow: var(--shadow-soft);
+}
+
+.admin-login input {
+  width: 160px;
+  padding: 6px 8px;
+  border-radius: 999px;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  background: rgba(15, 23, 42, 0.9);
+  color: var(--text-main);
+  outline: none;
+  margin-right: 6px;
+  font-size: 0.85rem;
+}
+
+.admin-hidden {
+  display: none;
+}
+
+#admin-json {
+  width: 100%;
+  min-height: 260px;
+  border-radius: 16px;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  background: rgba(15, 23, 42, 0.95);
+  color: var(--text-main);
+  padding: 10px 12px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  font-size: 0.8rem;
+}
+
+.admin-actions {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.form-grid {
+  margin-top: 20px;
+  padding: 14px;
+  border-radius: 16px;
+  background: rgba(15, 23, 42, 0.96);
+  box-shadow: var(--shadow-soft);
+}
+
+.form-grid h2 {
+  margin-top: 0;
+  font-size: 1rem;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.form-row label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.form-row input,
+.form-row textarea,
+.form-row select {
+  width: 100%;
+  padding: 6px 8px;
+  border-radius: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  background: rgba(15, 23, 42, 0.9);
+  color: var(--text-main);
+  font-size: 0.85rem;
+}
+
+/* small controls inside form */
+.small-input {
+  max-width: 120px;
+}
+
+/* episodes mini-table */
+#episode-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 8px;
+  font-size: 0.8rem;
+}
+
+#episode-table th,
+#episode-table td {
+  border-bottom: 1px solid rgba(55, 65, 81, 0.8);
+  padding: 4px 6px;
+}
+
+#episode-table input {
+  width: 100%;
+  padding: 4px 6px;
+  border-radius: 8px;
+  border: 1px solid rgba(75, 85, 99, 0.9);
+  background: rgba(15, 23, 42, 0.9);
+  color: var(--text-main);
+  font-size: 0.78rem;
 }
 
 /* ========== Footer ========== */
+
 .main-footer {
-  color: var(--text-muted);
-  font-size: 0.8rem;
+  max-width: 1100px;
+  margin: 0 auto;
   padding: 16px;
-  text-align: center;
+  border-top: 1px solid rgba(148, 163, 184, 0.3);
+  font-size: 0.8rem;
+  color: var(--text-muted);
 }
 
-/* responsive */
+/* ========== Responsive ========== */
+
 @media (max-width: 768px) {
-  #video-player { height: 45vh; }
-    }
+  .main-header {
+    padding: 10px 12px;
+  }
+  .logo {
+    font-size: 1.1rem;
+  }
+  .detail-header {
+    flex-direction: column;
+  }
+  .detail-poster {
+    width: 100%;
+    max-width: 260px;
+    margin: 0 auto;
+  }
+  #video-player {
+    height: 45vh;
+  }
+  .watch-controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  }
