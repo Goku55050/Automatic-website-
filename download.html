@@ -15,15 +15,27 @@
     <div class="logo">Ares Anime</div>
     <nav class="nav">
       <a href="index.html" class="nav-link">Home</a>
+      <a href="analysis.html" class="nav-link">Analysis</a>
     </nav>
   </header>
 
-  <!-- MAIN CONTENT -->
+  <!-- MAIN -->
   <main class="main-content">
 
-    <!-- ADS TOP -->
-    <section class="ads-section">
-      <!-- Banner Ad -->
+    <h1 id="download-title" class="section-title">Preparing download…</h1>
+    <p id="download-subtitle" class="anime-meta"></p>
+
+    <!-- COUNTDOWN -->
+    <div class="download-box">
+      Wait <b><span id="countdown">15</span> seconds</b>…
+      <p id="scroll-msg" style="display:none;">Scroll down for download ⬇</p>
+    </div>
+
+    <!-- ===================== REAL ADS START ===================== -->
+
+    <div class="download-ads-grid">
+
+      <!-- AD 1 (300x250) -->
       <div class="ad-block">
         <script type="text/javascript">
           atOptions = {
@@ -34,76 +46,58 @@
             'params' : {}
           };
         </script>
-        <script
-          type="text/javascript"
-          src="//www.highperformanceformat.com/1ca930ec4b20fce9334ce7973ff6dd40/invoke.js"
-        ></script>
+        <script type="text/javascript"
+        src="//www.highperformanceformat.com/1ca930ec4b20fce9334ce7973ff6dd40/invoke.js"></script>
       </div>
 
-      <!-- Native Ad -->
+      <!-- AD 2 (POPUNDER) -->
       <div class="ad-block">
-        <script
-          async="async"
-          data-cfasync="false"
-          src="//pl28151872.profitablecpmratecpm.com/9fdbf75c26ef51a2b19dbf748cf83bef/invoke.js"
-        ></script>
-        <div id="container-9fdbf75c26ef51a2b19dbf748cf83bef"></div>
+        <script async="async" data-cfasync="false"
+        src="//pl19760283.highperformanceformat.com/bfea8aa97ea58bdbdbf75c26ef51a2b19dbf748cf83bef/invoke.js"></script>
+        <div id="container-bfea8aa97ea58bdbdbf75c26ef51a2b19dbf748cf83bef"></div>
       </div>
-    </section>
 
-    <h1 id="download-title" class="section-title">Download Ready</h1>
+      <!-- AD 3 (728×90) -->
+      <div class="ad-block-wide">
+        <script type="text/javascript">
+          atOptions = {
+            'key' : 'ff07e6c3c0cd0d14f3fe1e9a0c18d7ce',
+            'format' : 'iframe',
+            'height' : 90,
+            'width' : 728,
+            'params' : {}
+          };
+        </script>
+        <script type="text/javascript"
+        src="//www.highperformanceformat.com/ff07e6c3c0cd0d14f3fe1e9a0c18d7ce/invoke.js"></script>
+      </div>
 
-    <!-- COUNTDOWN BOX -->
-    <div class="download-box">
-      <p class="subtitle">Your download will be ready in</p>
-
-      <h2 id="countdown" style="
-        font-size: 2.4rem;
-        text-align: center;
-        margin: 12px 0;
-        background: linear-gradient(90deg, #ff65c7, #4c5cff);
-        -webkit-background-clip: text;
-        color: transparent;
-      ">5</h2>
-
-      <a id="download-link" class="btn-primary" href="#" style="pointer-events:none;opacity:0.6;">
-        Please wait...
-      </a>
     </div>
 
-    <p class="subtitle" style="margin-top: 20px;">
-      If the download doesn’t start, open the link in a new tab.
-    </p>
+    <!-- ===================== REAL ADS END ===================== -->
+
+    <!-- DOWNLOAD LINKS (unlocked after countdown) -->
+    <div id="download-links" class="download-links hidden">
+      <!-- script.js will add buttons here -->
+    </div>
+
+    <!-- DISCLAIMER -->
+    <div class="disclaimer-box" style="margin-top: 30px;">
+      <p>
+        Ares Anime does not store any files on its own server.<br>
+        We only index links from the internet hosted on third-party servers.<br>
+        We index links just like Google.<br><br>
+        © 2025 Ares Anime. All Rights Reserved.
+      </p>
+    </div>
 
   </main>
 
   <!-- FOOTER -->
   <footer class="main-footer">
-    <p>Ares Anime never hosts files. All downloads come from third-party hosts.</p>
+    <p>© 2025 Ares Anime</p>
   </footer>
 
   <script src="script.js"></script>
-
-  <!-- COUNTDOWN SCRIPT -->
-  <script>
-    let timeLeft = 5;
-    const countdownEl = document.getElementById("countdown");
-    const dlBtn = document.getElementById("download-link");
-
-    const interval = setInterval(() => {
-      timeLeft--;
-      countdownEl.textContent = timeLeft;
-
-      if (timeLeft <= 0) {
-        clearInterval(interval);
-
-        countdownEl.textContent = "Ready!";
-        dlBtn.style.opacity = "1";
-        dlBtn.style.pointerEvents = "auto";
-        dlBtn.textContent = "Download Now";
-      }
-    }, 1000);
-  </script>
-
 </body>
-      </html>
+  </html>
