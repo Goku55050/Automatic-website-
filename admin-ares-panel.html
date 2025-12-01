@@ -2,120 +2,160 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Ares Admin Panel</title>
+  <title>Ares Anime – Admin Panel</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body id="admin" data-page="admin">
   <div class="stars-bg"></div>
 
   <header class="main-header">
     <div class="logo">Ares Anime – Admin</div>
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Home</a>
+    </nav>
   </header>
 
-  <main class="main-content admin-page">
-    <p class="admin-note">
-      Simple offline panel for your JSON anime data. This page does <strong>not</strong> directly change your live site –
-      it only helps you build the JSON you will copy into <code>script.js</code>.
+  <main id="admin-panel" class="main-content">
+
+    <h1 class="section-title">Admin Panel</h1>
+    <p class="subtitle">
+      Edit anime → seasons → episodes → JSON (Filemoon + StreamGH)
     </p>
 
-    <section class="admin-login" id="admin-login">
-      <label for="admin-password">Password:</label>
-      <input id="admin-password" type="password" placeholder="Enter admin password" />
-      <button id="admin-login-btn" class="btn-primary">Unlock Panel</button>
-      <p class="subtitle">Default password: <code>Ares13579</code></p>
+    <!-- ================================
+         SELECT ANIME
+    =================================== -->
+    <section class="admin-block">
+      <h2>1. Select Anime</h2>
+
+      <label>Choose Anime:</label>
+      <select id="anime-select"></select>
+
+      <h3>Basic Info</h3>
+
+      <div class="admin-grid">
+        <div>
+          <label>Anime ID:</label>
+          <input id="anime-id" placeholder="jjk" />
+        </div>
+
+        <div>
+          <label>Title:</label>
+          <input id="anime-title" placeholder="Anime Name" />
+        </div>
+
+        <div>
+          <label>Poster URL:</label>
+          <input id="anime-poster" placeholder="https://..." />
+        </div>
+
+        <div>
+          <label>Description:</label>
+          <textarea id="anime-description" rows="3"></textarea>
+        </div>
+      </div>
     </section>
 
-    <section id="admin-main" class="admin-hidden">
-      <section class="form-grid">
-        <h2>Anime / Season / Episode Editor</h2>
 
-        <div class="form-row">
-          <label>Choose anime:</label>
-          <select id="anime-select"></select>
-          <button id="add-anime-btn" class="btn-secondary" type="button">+ Add new anime</button>
+    <!-- ================================
+         SEASONS
+    =================================== -->
+    <section class="admin-block">
+      <h2>2. Select Season</h2>
+
+      <label>Choose Season:</label>
+      <select id="season-select"></select>
+
+      <h3>Season Info</h3>
+
+      <div class="admin-grid">
+        <div>
+          <label>Season ID:</label>
+          <input id="season-id" placeholder="s1" />
         </div>
 
-        <div class="form-row">
-          <label for="anime-id">Anime ID (short, no spaces)</label>
-          <input id="anime-id" />
+        <div>
+          <label>Season Name:</label>
+          <input id="season-name" placeholder="Season 1" />
         </div>
 
-        <div class="form-row">
-          <label for="anime-title">Anime title</label>
-          <input id="anime-title" />
+        <div>
+          <label>Total Episodes:</label>
+          <input id="season-total" type="number" />
         </div>
-
-        <div class="form-row">
-          <label for="anime-poster">Poster URL</label>
-          <input id="anime-poster" />
-        </div>
-
-        <div class="form-row">
-          <label for="anime-desc">Short description</label>
-          <textarea id="anime-desc" rows="3"></textarea>
-        </div>
-
-        <hr style="border-color: rgba(55,65,81,0.8); margin: 12px 0;" />
-
-        <div class="form-row">
-          <label for="season-select">Season</label>
-          <select id="season-select"></select>
-          <button id="add-season-btn" class="btn-secondary" type="button">+ Add season</button>
-        </div>
-
-        <div class="form-row">
-          <label for="season-id">Season ID</label>
-          <input id="season-id" class="small-input" />
-          <label for="season-name">Season name</label>
-          <input id="season-name" />
-        </div>
-
-        <div class="form-row">
-          <label for="season-total">Total episodes (info only)</label>
-          <input id="season-total" type="number" class="small-input" />
-        </div>
-
-        <div class="form-row">
-          <label>Episodes</label>
-          <table id="episode-table">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Title</th>
-                <th>Stream URL</th>
-                <th>Download URL</th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody id="episode-tbody">
-              <!-- rows inserted by JS -->
-            </tbody>
-          </table>
-          <button id="add-episode-row-btn" class="btn-secondary" type="button">+ Add episode row</button>
-        </div>
-      </section>
-
-      <section style="margin-top: 18px;">
-        <h2>Generated animeData JSON</h2>
-        <textarea id="admin-json" spellcheck="false"></textarea>
-        <div class="admin-actions">
-          <button id="admin-refresh-json" class="btn-primary" type="button">Refresh JSON from form</button>
-          <button id="admin-download-json" class="btn-secondary" type="button">Download JSON file</button>
-        </div>
-
-        <p class="hint-text">
-          Tip: After editing, click <strong>Refresh JSON</strong>, then copy the JSON into <code>script.js</code>
-          replacing the existing <code>animeData</code> value, commit &amp; deploy.
-        </p>
-      </section>
+      </div>
     </section>
+
+
+    <!-- ================================
+         EPISODES TABLE
+    =================================== -->
+    <section class="admin-block">
+      <h2>3. Episodes</h2>
+
+      <table id="episode-table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Episode Title</th>
+            <th>Filemoon URL</th>
+            <th>StreamGH URL</th>
+            <th>Download URL</th>
+            <th></th>
+          </tr>
+        </thead>
+
+        <tbody id="episode-tbody">
+          <!-- Auto filled by JS -->
+        </tbody>
+
+      </table>
+
+      <button id="add-episode-btn" class="btn-primary" style="margin-top: 12px;">
+        + Add Episode
+      </button>
+
+  </section>
+  <!-- ================================
+         JSON OUTPUT
+    =================================== -->
+    <section class="admin-block">
+      <h2>4. JSON Output</h2>
+      <textarea id="json-output" rows="14"></textarea>
+
+      <button id="save-btn" class="btn-secondary">Copy JSON</button>
+    </section>
+
   </main>
 
   <footer class="main-footer">
-    <p>Admin panel – do not share this URL publicly.</p>
+    <p>
+      Admin panel updates the live animeData object used by the entire site.
+    </p>
   </footer>
 
   <script src="script.js"></script>
+
+  <script>
+    // Add-episode button simply calls the function directly
+    document.getElementById("add-episode-btn").onclick = () => {
+      // Empty episode row for new entry
+      const newEp = {
+        number: "",
+        name: "",
+        filemoonUrl: "",
+        streamghUrl: "",
+        downloadUrl: ""
+      };
+      // Function defined inside script.js
+      const tbody = document.querySelector("#episode-tbody");
+      if (tbody && window.addEpisodeRow) {
+        addEpisodeRow(newEp);
+      }
+    };
+  </script>
+
 </body>
-            </html>
+  </html>
