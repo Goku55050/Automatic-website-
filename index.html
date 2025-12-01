@@ -2,50 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Ares Anime – Hindi Dubbed</title>
+  <title>Ares Anime – Home</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body id="home" data-page="home">
   <div class="stars-bg"></div>
 
   <header class="main-header">
     <div class="logo">Ares Anime</div>
     <nav class="nav">
-      <button id="browse-btn" class="btn-primary">Browse Anime</button>
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="episodes.html" class="nav-link">Episodes</a>
+      <a href="admin-ares-panel.html" class="nav-link">Admin</a>
     </nav>
   </header>
 
   <main class="main-content">
-    <!-- SEARCH -->
-    <section class="search-section">
-      <input
-        id="search-input"
-        type="text"
-        placeholder="Search Hindi dubbed anime..."
-        autocomplete="off"
-      />
-    </section>
-   <!-- ANIME GRID -->
-    <section class="anime-section">
-      <div class="anime-section-header">
-        <h1>Hindi Dubbed Anime Collection</h1>
-        <p class="subtitle">
-          Only Hindi dubbed anime • Stream & download via external links
-        </p>
-      </div>
+    <section class="home-hero">
+      <h1 class="home-title">Ares Anime</h1>
+      <p class="home-subtitle">
+        Watch your favorite Hindi-dubbed anime in one clean, fast interface.
+      </p>
 
+      <div class="home-search">
+        <input
+          id="search-input"
+          type="text"
+          placeholder="Search anime..."
+          autocomplete="off"
+        />
+        <button id="browse-btn" class="btn-primary">Browse</button>
+      </div>
+    </section>
+
+    <section class="anime-section">
+      <h2 class="section-title">Available Anime</h2>
       <div id="anime-grid" class="anime-grid">
-        <!-- Cards injected by script.js -->
+        <!-- JS will auto-fill anime cards from animeData[] -->
       </div>
     </section>
   </main>
 
   <footer class="main-footer">
     <p>
-      Ares Anime does not host or upload any videos. We only index publicly
-      available third-party streaming links. All videos are hosted on external
-      servers.
+      Ares Anime does not store any files on own server 
+      We only index links from internet which are hosted on third-party services.
+      We Index Links Just Like Google      
     </p>
   </footer>
 
