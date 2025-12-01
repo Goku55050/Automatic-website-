@@ -2,13 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Episodes – Ares Anime</title>
+  <title>Ares Anime – Episodes</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body id="episodes" data-page="episodes">
   <div class="stars-bg"></div>
 
+  <!-- HEADER -->
   <header class="main-header">
     <div class="logo">Ares Anime</div>
     <nav class="nav">
@@ -16,31 +18,24 @@
     </nav>
   </header>
 
+  <!-- MAIN CONTENT -->
   <main class="main-content">
-    <section class="detail-header">
-      <div class="detail-poster">
-        <img id="detail-poster-img" src="" alt="Poster" />
-      </div>
-      <div class="detail-text">
-        <h1 id="detail-title">Loading…</h1>
-        <p id="detail-desc"></p>
-        <p class="subtitle" id="detail-meta"></p>
-      </div>
-    </section>
+    <h1 id="anime-title" class="section-title">Loading…</h1>
 
-    <section class="episode-list" id="episode-list">
-      <!-- Episodes injected by script.js -->
-    </section>
+    <ul id="episode-list" class="episode-list">
+      <!-- Episodes auto-filled by script.js -->
+    </ul>
   </main>
 
+  <!-- FOOTER -->
   <footer class="main-footer">
     <p>
-      Ares Anime does not host or upload any videos. We only index publicly
-      available third-party streaming links. All videos are hosted on external
-      servers.
+      Ares Anime does not store any files on own server,
+      We only index links from internet which are hosted on third-party services.
+      We Index Links Just Like Google
     </p>
   </footer>
 
   <script src="script.js"></script>
 </body>
-  </html>
+</html>
