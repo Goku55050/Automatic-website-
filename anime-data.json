@@ -1,179 +1,19 @@
 {
-  "animes": [
-    {
-      "id": "jjk",
-      "title": "Jujutsu Kaisen (Hindi Dubbed)",
-      "poster": "https://i.postimg.cc/DydT6TPN/818DUzqnw-ES.jpg",
-      "description": "Ek school student jo curses se ladta hai – pure season 1 Hindi dubbed.",
-      "seasons": [
-        {
-          "id": "s1",
-          "name": "Season 1 (Hindi Dubbed)",
-          "episodes": [
-            {
-              "id": "1",
-              "number": 1,
-              "title": "Ryomen Sukuna",
-              "streamUrl": "https://filemoon.to/e/w489ph62gwkc",
-              "downloadUrl": "https://filemoon.to/download/w489ph62gwkc"
-            },
-            {
-              "id": "2",
-              "number": 2,
-              "title": "For Myself",
-              "streamUrl": "https://filemoon.sx/e/jjk-s1-ep2",
-              "downloadUrl": "https://filemoon.sx/e/jjk-s1-ep2"
-            },
-            {
-              "id": "3",
-              "number": 3,
-              "title": "Girl of Steel",
-              "streamUrl": "https://filemoon.sx/e/jjk-s1-ep3",
-              "downloadUrl": "https://filemoon.sx/e/jjk-s1-ep3"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "dandadan",
-      "title": "Dandadan (Hindi Dubbed)",
-      "poster": "https://i.postimg.cc/0NNKxZNr/DAN-DA-DAN-Official-Key-Art-2x3-1-scaled.jpg",
-      "description": "Aliens vs ghosts – crazy urban adventure, Hindi dubbed.",
-      "seasons": [
-        {
-          "id": "s1",
-          "name": "Season 1 (Hindi Dubbed)",
-          "episodes": [
-            {
-              "id": "1",
-              "number": 1,
-              "title": "That's How Love Starts, Ya Know!",
-              "streamUrl": "https://filemoon.sx/e/dandadan-s1-ep1",
-              "downloadUrl": "https://filemoon.sx/e/dandadan-s1-ep1"
-            },
-            {
-              "id": "2",
-              "number": 2,
-              "title": "That's a Space Alien, Ain't It?!",
-              "streamUrl": "https://filemoon.sx/e/dandadan-s1-ep2",
-              "downloadUrl": "https://filemoon.sx/e/dandadan-s1-ep2"
-            },
-            {
-              "id": "3",
-              "number": 3,
-              "title": "It's a Granny vs. Granny Clash!",
-              "streamUrl": "https://filemoon.sx/e/dandadan-s1-ep3",
-              "downloadUrl": "https://filemoon.sx/e/dandadan-s1-ep3"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "cote",
-      "title": "Classroom of the Elite (Hindi Dubbed)",
-      "poster": "https://i.postimg.cc/4ywTJvyN/MV5BMDg3MGVh-NWUt-YTQ2NS00ZDdi-LTg5MTMt-Zm-M5Mj-Uz-N2Ix-N2I4Xk-Ey-Xk-Fqc-Gc-V1.jpg",
-      "description": "Top secret elite school jahan sab mind games aur strategy hai.",
-      "seasons": [
-        {
-          "id": "s1",
-          "name": "Season 1 (Hindi Dubbed)",
-          "episodes": [
-            {
-              "id": "1",
-              "number": 1,
-              "title": "What is Evil? Whatever Springs from Weakness.",
-              "streamUrl": "https://filemoon.sx/e/cote-s1-ep1",
-              "downloadUrl": "https://filemoon.sx/e/cote-s1-ep1"
-            },
-            {
-              "id": "2",
-              "number": 2,
-              "title": "It Takes a Great Talent and Skill to Conceal One's Talent and Skill.",
-              "streamUrl": "https://filemoon.sx/e/cote-s1-ep2",
-              "downloadUrl": "https://filemoon.sx/e/cote-s1-ep2"
-            },
-            {
-              "id": "3",
-              "number": 3,
-              "title": "Man is an Animal that makes Bargains...",
-              "streamUrl": "https://filemoon.sx/e/cote-s1-ep3",
-              "downloadUrl": "https://filemoon.sx/e/cote-s1-ep3"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "mha",
-      "title": "My Hero Academia (Hindi Dubbed)",
-      "poster": "https://i.postimg.cc/fW54SKWZ/Bokuno-Hiro-Akademiakeyvisual.jpg",
-      "description": "Quirkless ladka bhi Hero ban sakta hai – MHA Hindi dubbed.",
-      "seasons": [
-        {
-          "id": "s1",
-          "name": "Season 1 (Hindi Dubbed)",
-          "episodes": [
-            {
-              "id": "1",
-              "number": 1,
-              "title": "Izuku Midoriya: Origin",
-              "streamUrl": "https://filemoon.sx/e/mha-s1-ep1",
-              "downloadUrl": "https://filemoon.sx/e/mha-s1-ep1"
-            },
-            {
-              "id": "2",
-              "number": 2,
-              "title": "What It Takes to Be a Hero",
-              "streamUrl": "https://filemoon.sx/e/mha-s1-ep2",
-              "downloadUrl": "https://filemoon.sx/e/mha-s1-ep2"
-            },
-            {
-              "id": "3",
-              "number": 3,
-              "title": "Roaring Muscles",
-              "streamUrl": "https://filemoon.sx/e/mha-s1-ep3",
-              "downloadUrl": "https://filemoon.sx/e/mha-s1-ep3"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "csm",
-      "title": "Chainsaw Man (Hindi Dubbed)",
-      "poster": "https://i.postimg.cc/prc1GsyH/MV5BZGY2ZTM2MWMt-Nz-A2OS00Zj-Jl-LWIw-ZTMt-MDBh-N2Ew-Yj-Zj-Zj-Ey-Xk-Ey-Xk-Fqc-Gc-V1-FMjpg-UX1000.jpg",
-      "description": "Denji + Pochita = Chainsaw Man – dark devil hunting Hindi dubbed.",
-      "seasons": [
-        {
-          "id": "s1",
-          "name": "Season 1 (Hindi Dubbed)",
-          "episodes": [
-            {
-              "id": "1",
-              "number": 1,
-              "title": "Dog & Chainsaw",
-              "streamUrl": "https://filemoon.sx/e/csm-s1-ep1",
-              "downloadUrl": "https://filemoon.sx/e/csm-s1-ep1"
-            },
-            {
-              "id":  "2",
-              "number": 2,
-              "title": "Arrival in Tokyo",
-              "streamUrl": "https://filemoon.sx/e/csm-s1-ep2",
-              "downloadUrl": "https://filemoon.sx/e/csm-s1-ep2"
-            },
-            {
-              "id": "3",
-              "number": 3,
-              "title": "Meowy's Whereabouts",
-              "streamUrl": "https://filemoon.sx/e/csm-s1-ep3",
-              "downloadUrl": "https://filemoon.sx/e/csm-s1-ep3"
-            }
-          ]
-        }
-      ]
-    }
-  ]
-            }
+  "jjk": {
+    "title": "Jujutsu Kaisen (Hindi Dubbed)",
+    "poster": "https://i.postimg.cc/DydT6TPN/818DUzqnw-ES.jpg",
+    "description": "Ek school student jo curses se ladta hai – pure season 1 Hindi dubbed.",
+    "year": "2025",
+    "tags": "Action, Supernatural",
+    "seasons": {}
+  },
+
+  "csm": {
+    "title": "Chainsaw Man (Hindi Dubbed)",
+    "poster": "https://i.postimg.cc/prc1GsyH/MV5BZGY2ZTM2MWMt_Nz_A2OS00Zj_Jl_LWIw_ZTMt_MDBh_N2Ew_Yj_Zj_Zj_Ey_Xk_Ey_Xk_Fqc_Gc_V1_FMjpg_UX1000.jpg",
+    "description": "Denji aur Pochita ki brutal dark fantasy story.",
+    "year": "2025",
+    "tags": "Action, Gore, Dark Fantasy",
+    "seasons": {}
+  }
+}
