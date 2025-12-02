@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ares Anime – Episodes</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body id="episodes" data-page="episodes">
+  <div class="stars-bg"></div>
+
+  <!-- HEADER -->
+  <header class="main-header">
+    <div class="logo">Ares Anime</div>
+    <nav class="nav">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="analysis.html" class="nav-link">Analysis</a>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+
+    <!-- ANIME HERO SECTION (Poster + Info) -->
+    <section class="anime-hero">
+      <div class="anime-hero-poster">
+        <img id="anime-poster" src="" alt="Anime Poster" />
+      </div>
+
+      <div class="anime-hero-info">
+        <h1 id="anime-title">Loading…</h1>
+        <p id="anime-description"></p>
+
+        <label for="season-select" style="margin-top: 10px; display: block;">
+          <b>Select Season</b>
+        </label>
+        <select id="season-select" class="season-dropdown"></select>
+      </div>
+    </section>
+
+    <!-- EPISODE LIST -->
+    <h2 class="section-title">Episodes</h2>
+
+    <ul id="episode-list" class="episode-list">
+      <!-- Filled by script.js -->
+    </ul>
+
+    <!-- DISCLAIMER -->
+    <div class="disclaimer-box" style="margin-top: 30px;">
+      <p>
+        Ares Anime does not store any files on its own server.<br>
+        We only index links from the internet hosted on third-party servers.<br>
+        We index links just like Google.<br><br>
+        © 2025 Ares Anime. All Rights Reserved.
+      </p>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="main-footer">
+    <p>© 2025 Ares Anime</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

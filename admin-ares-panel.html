@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ares Anime – Admin Panel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body data-page="admin">
+  <div class="stars-bg"></div>
+
+  <main class="main-content">
+
+    <h1 class="section-title">Ares Anime – Admin Dashboard</h1>
+    <p class="subtitle">Admin access is password protected via script.js</p>
+
+    <!-- ===================== JSON VIEWER ===================== -->
+    <section class="admin-block">
+      <h2>Anime Database (JSON Viewer)</h2>
+
+      <button id="refresh-json" class="btn-secondary">Reload JSON</button>
+      <button id="download-json" class="btn-primary">Download Updated JSON</button>
+
+      <textarea id="json-viewer" rows="10" style="margin-top:14px;"></textarea>
+    </section>
+
+    <!-- ===================== SELECT ANIME ===================== -->
+    <section class="admin-block">
+      <h2>Select Anime</h2>
+
+      <select id="select-anime" class="input-select"></select>
+
+      <div id="anime-editor" class="hidden" style="margin-top: 14px;">
+        <h3>Edit Anime</h3>
+
+        <div class="admin-grid">
+          <div>
+            <label>Title</label>
+            <input id="edit-anime-title" type="text" />
+          </div>
+
+          <div>
+            <label>Poster URL</label>
+            <input id="edit-anime-poster" type="text" />
+          </div>
+
+          <div class="full">
+            <label>Description</label>
+            <textarea id="edit-anime-description"></textarea>
+          </div>
+
+          <div>
+            <label>Year</label>
+            <input id="edit-anime-year" type="number" />
+          </div>
+
+          <div>
+            <label>Tags</label>
+            <input id="edit-anime-tags" type="text" />
+          </div>
+        </div>
+
+        <button id="save-anime-changes" class="btn-primary" style="margin-top:10px;">Save Anime</button>
+      </div>
+    </section>
+
+    <!-- ===================== ADD NEW ANIME ===================== -->
+    <section class="admin-block">
+      <h2>Add New Anime</h2>
+
+      <div class="admin-grid">
+        <div>
+          <label>Anime ID (slug)</label>
+          <input id="new-anime-id" placeholder="jujutsu-kaisen" />
+        </div>
+
+        <div>
+          <label>Title</label>
+          <input id="new-anime-title" />
+        </div>
+
+        <div>
+          <label>Poster URL</label>
+          <input id="new-anime-poster" />
+        </div>
+
+        <div class="full">
+          <label>Description</label>
+          <textarea id="new-anime-description"></textarea>
+        </div>
+
+        <div>
+          <label>Year</label>
+          <input id="new-anime-year" type="number" />
+        </div>
+
+        <div>
+          <label>Tags (comma separated)</label>
+          <input id="new-anime-tags" />
+        </div>
+      </div>
+
+      <button id="add-anime" class="btn-primary" style="margin-top:10px;">
+        Add Anime
+      </button>
+    </section>
+
+    <!-- ===================== SEASONS PANEL ===================== -->
+    <section class="admin-block">
+      <h2>Seasons</h2>
+
+      <div id="season-box" class="hidden">
+
+        <select id="select-season"></select>
+
+        <div class="admin-grid" style="margin-top:14px;">
+          <div>
+            <label>Season Name</label>
+            <input id="edit-season-name" type="text" />
+          </div>
+        </div>
+
+        <button id="save-season-changes" class="btn-secondary" style="margin-top:10px;">
+          Save Season
+        </button>
+      </div>
+
+      <h3>Add New Season</h3>
+
+      <div class="admin-grid">
+        <div>
+          <label>Season ID</label>
+          <input id="new-season-id" placeholder="s2" />
+        </div>
+
+        <div>
+          <label>Season Name</label>
+          <input id="new-season-name" placeholder="Season 2" />
+        </div>
+      </div>
+
+      <button id="add-season" class="btn-primary" style="margin-top:10px;">
+        Add Season
+      </button>
+    </section>
+
+    <!-- ===================== EPISODE TABLE ===================== -->
+    <section class="admin-block">
+      <h2>Episodes</h2>
+
+      <div id="episode-list-box" class="hidden">
+        <table id="episode-table">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>Title</th>
+              <th>Watch Links</th>
+              <th>Download Links</th>
+              <th>Edit</th>
+            </tr>
+          </thead>
+          <tbody id="episode-table-body"></tbody>
+        </table>
+      </div>
+
+      <h3>Add New Episode</h3>
+
+      <div class="admin-grid">
+        <div>
+          <label>Episode ID</label>
+          <input id="new-ep-id" placeholder="e1" />
+        </div>
+
+        <div>
+          <label>Episode Number</label>
+          <input id="new-ep-number" type="number" placeholder="1" />
+        </div>
+
+        <div class="full">
+          <label>Episode Title</label>
+          <input id="new-ep-title" placeholder="Episode title" />
+        </div>
+      </div>
+
+      <button id="add-episode" class="btn-primary" style="margin-top:10px;">
+        Add Episode
+      </button>
+    </section>
+
+    <!-- ===================== EPISODE EDIT POPUP ===================== -->
+    <section id="edit-episode-box" class="admin-block hidden">
+
+      <h2>Edit Episode</h2>
+
+      <div class="admin-grid">
+        <div>
+          <label>Episode Number</label>
+          <input id="edit-ep-number" type="number" />
+        </div>
+
+        <div class="full">
+          <label>Episode Title</label>
+          <input id="edit-ep-title" />
+        </div>
+      </div>
+
+      <!-- WATCH LINKS -->
+      <h3>Watch Links</h3>
+      <div id="watch-links-box" class="links-box"></div>
+      <button id="add-watch-link" class="btn-secondary">+ Add Watch Link</button>
+
+      <!-- DOWNLOAD LINKS -->
+      <h3 style="margin-top:14px;">Download Links</h3>
+      <div id="download-links-box" class="links-box"></div>
+      <button id="add-download-link" class="btn-secondary">+ Add Download Link</button>
+
+      <button id="save-episode-changes" class="btn-primary" style="margin-top:14px;">
+        Save Episode
+      </button>
+    </section>
+
+    <!-- DISCLAIMER -->
+    <div class="disclaimer-box" style="margin-top:20px;">
+      <p>
+        Ares Anime does not store any files on its own server.<br>
+        We only index links from the internet hosted on third-party servers.<br>
+        We index links just like Google.<br><br>
+        © 2025 Ares Anime. All Rights Reserved.
+      </p>
+    </div>
+
+  </main>
+
+  <footer class="main-footer">
+    <p>© 2025 Ares Anime</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+  </html>

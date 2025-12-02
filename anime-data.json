@@ -1,0 +1,48 @@
+{
+  "jjk": {
+    "title": "Jujutsu Kaisen (Hindi Dubbed)",
+    "poster": "https://i.postimg.cc/DydT6TPN/818DUzqnw-ES.jpg",
+    "description": "Yuji Itadori is a high-school student who unexpectedly becomes the host of a powerful curse named Ryomen Sukuna after swallowing one of his preserved fingers. To prevent Sukuna’s full resurrection and save humanity, Yuji joins a secret society of Jujutsu sorcerers who battle malevolent “curses” — supernatural entities born from negative human emotions — using cursed energy and special techniques. Thus begins his journey as a “curse to fight curses.”",
+    "year": "2025",
+    "tags": "Dark Fantasy , Supernatural Action , Horror , Shonen",
+    "seasons": {
+      "s1": {
+        "name": "Season 1",
+        "episodes": {
+          "E1": {
+            "number": 1,
+            "title": "Ryomen Sukuna",
+            "watchLinks": [
+              {
+                "label": "server 1",
+                "url": "https://filemoon.to/e/9ohpjcux590q"
+              },
+              {
+                "label": "server 2",
+                "url": "https://hglink.to/e/em1wazxg4aco"
+              }
+            ],
+            "downloadLinks": [
+              {
+                "label": "download 1",
+                "url": "https://filemoon.to/download/9ohpjcux590q"
+              },
+              {
+                "label": "download 2",
+                "url": "https://hglink.to/download/em1wazxg4aco"
+              }
+            ]
+          }
+        }
+      }
+    }
+  },
+  "csm": {
+    "title": "Chainsaw Man (Hindi Dubbed)",
+    "poster": "https://i.postimg.cc/prc1GsyH/MV5BZGY2ZTM2MWMt_Nz_A2OS00Zj_Jl_LWIw_ZTMt_MDBh_N2Ew_Yj_Zj_Zj_Ey_Xk_Ey_Xk_Fqc_Gc_V1_FMjpg_UX1000.jpg",
+    "description": "Denji, a broke teenager drowning in debt, works as a devil hunter with his chainsaw-dog Pochita. After a brutal betrayal, the two fuse, giving Denji the ability to turn his limbs into roaring chainsaws. Taken in by Public Safety, he begins hunting devils while navigating a dangerous world filled with eerie devils, manipulative humans, and his own wild dreams. Season 1 is a high-octane plunge into fear, desire, and power.",
+    "year": "2025",
+    "tags": "Action, Gore, Dark Fantasy",
+    "seasons": {}
+  }
+  }
