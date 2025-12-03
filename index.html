@@ -1,178 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Ares Anime – Home</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="style.css" />
-
-
-<style>
-  /* Galaxy animated background only for home page */
-  body[data-page="home"] {
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    color: #e5e7eb;
-    background:
-      radial-gradient(circle at 50% 50%, rgba(79, 70, 229, 0.25), transparent 70%),
-      radial-gradient(circle at 20% 80%, rgba(236, 72, 153, 0.2), transparent 70%),
-      #050816;
-    animation: skyMove 20s ease-in-out infinite;
-    overflow-x: hidden;
-  }
-
-  @keyframes skyMove {
-    0% { background-position: 0% 0%; }
-    50% { background-position: 50% 50%; }
-    100% { background-position: 0% 0%; }
-  }
-
-  /* Starfield canvas behind everything */
-  #starfield {
-    position: fixed;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-  }
-
-  /* Gradient disclaimer card */
-  .disclaimer-box {
-    margin: 30px auto;
-    padding: 20px 25px;
-    max-width: 90%;
-    background: rgba(15, 23, 42, 0.92);
-    border-radius: 24px;
-    border: 1px solid rgba(148, 163, 184, 0.45);
-    box-shadow: 0 22px 50px rgba(0,0,0,0.55);
-    position: relative;
-    overflow: hidden;
-  }
-  .disclaimer-box::before {
-    content: "";
-    position: absolute;
-    inset: -2px;
-    border-radius: inherit;
-    background: radial-gradient(circle at 0% 0%, #f97316, transparent 55%),
-                radial-gradient(circle at 100% 0%, #ec4899, transparent 55%),
-                radial-gradient(circle at 0% 100%, #22d3ee, transparent 55%);
-    opacity: 0.45;
-    z-index: -1;
-  }
-  .disclaimer-box h2 {
-    color: #ffffff;
-    font-size: 22px;
-    margin-bottom: 10px;
-    text-align: center;
-    letter-spacing: 0.05em;
-  }
-  .disclaimer-box p {
-    color: #e5e7eb;
-    font-size: 15px;
-    line-height: 1.7;
-    text-align: center;
-  }
-</style>
-
-
+  <meta charset="UTF-8">
+  <title>Ares Anime - Hindi Dubbed</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
+<body class="page-home">
+  <!-- moving star background layers -->
+  <div class="stars"></div>
+  <div class="stars2"></div>
 
-<body id="home" data-page="home">
-  <canvas id="starfield"></canvas>
-
-  <!-- HEADER -->
-  <header class="main-header">
+  <header class="site-header">
     <div class="logo">Ares Anime</div>
     <nav class="nav">
       <a href="index.html" class="nav-link active">Home</a>
-      
-      <!-- Admin link hidden on purpose -->
+      <a href="#anime-list" class="nav-link">Browse Anime</a>
+      <a href="admin.html" class="nav-link">Admin</a>
     </nav>
   </header>
 
-  <!-- MAIN CONTENT -->
-  <main class="main-content">
-
-    <!-- HERO SECTION -->
-    <section class="home-hero">
-      <h1 class="home-title">Ares Anime</h1>
-      <p class="home-subtitle">Watch your favourite Hindi-Dubbed anime.</p>
-
-      <div class="home-search">
-        <input id="search-input" type="text" placeholder="Search anime..." autocomplete="off" />
+  <main class="content">
+    <!-- HERO BANNER SLIDESHOW -->
+    <section class="hero-banner">
+      <div class="hero-bg" id="heroBg"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-inner">
+        <p class="hero-tag">Hindi Dubbed • Updated</p>
+        <h1 id="heroTitle">Loading…</h1>
+        <p id="heroDesc"></p>
+        <div class="hero-actions">
+          <button id="heroBtn" class="btn-primary">Watch Now</button>
+        </div>
       </div>
     </section>
 
-    <!-- ANIME LIBRARY -->
-    <h2 class="section-title">Anime Library</h2>
+    <!-- Netflix-style rows -->
+    <section class="row-section">
+      <h2 class="row-title">Latest</h2>
+      <div class="row-scroll" id="row-latest"></div>
+    </section>
 
-    <div id="anime-list" class="anime-grid">
-      <!-- Auto-filled by script.js -->
-    </div>
+    <section class="row-section">
+      <h2 class="row-title">Popular</h2>
+      <div class="row-scroll" id="row-popular"></div>
+    </section>
 
-    <!-- DISCLAIMER -->
-    
-<div class="disclaimer-box">
-    <h2>Disclaimer</h2>
-    <p>
-        Ares Anime does not store any files on its own server.<br>
-        We only index links from the internet hosted on third-party servers.<br>
-        We index links just like Google.
-    </p>
-</div>
+    <section class="row-section">
+      <h2 class="row-title">Trending</h2>
+      <div class="row-scroll" id="row-trending"></div>
+    </section>
 
-
+    <!-- Full grid -->
+    <section class="anime-list-section">
+      <h2>All Hindi Dubbed Anime</h2>
+      <div id="anime-list" class="anime-grid">
+        <!-- cards injected by script.js -->
+      </div>
+    </section>
   </main>
 
-  <!-- FOOTER -->
-  <footer class="main-footer">
-    <p>© 2025 Ares Anime</p>
+  <footer class="site-footer">
+    <p>
+      Ares Anime does not host or upload any videos. We only index publicly available third-party streaming links.
+      All videos are hosted on external servers.
+    </p>
   </footer>
-
-  
-  <!-- Home starfield animation -->
-  <script>
-  (function(){
-    const canvas = document.getElementById("starfield");
-    if (!canvas) return;
-    const ctx = canvas.getContext("2d");
-    let stars = [], w, h;
-
-    function resize() {
-      w = canvas.width = window.innerWidth;
-      h = canvas.height = window.innerHeight;
-      stars = [];
-      for (let i = 0; i < 170; i++) {
-        stars.push({
-          x: Math.random() * w,
-          y: Math.random() * h,
-          z: Math.random() * 0.8 + 0.2,
-          s: Math.random() * 1.2 + 0.2
-        });
-      }
-    }
-
-    function draw() {
-      ctx.clearRect(0, 0, w, h);
-      for (let s of stars) {
-        ctx.fillStyle = "rgba(255,255,255," + s.z + ")";
-        ctx.beginPath();
-        ctx.arc(s.x, s.y, s.s, 0, Math.PI * 2);
-        ctx.fill();
-        s.y += s.z * 0.25;
-        if (s.y > h) s.y = 0;
-      }
-      requestAnimationFrame(draw);
-    }
-
-    window.addEventListener("resize", resize);
-    resize();
-    draw();
-  })();
-  </script>
 
   <script src="script.js"></script>
 </body>
-    </html>
+</html>
