@@ -1,181 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Ares Anime – Admin Panel</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="style.css">
+
+  <link rel="stylesheet" href="style.css" />
 
   <style>
     body {
-      background: #070415;
+      background: transparent !important;
       color: white;
-      padding: 20px;
     }
 
-    .admin-box {
+    #global-bg {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background: radial-gradient(circle at top, #3b1b72 0%, #080415 40%, #020006 100%);
+      pointer-events: none;
+    }
+
+    .admin-wrapper {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .admin-card {
       background: rgba(255,255,255,0.08);
-      padding: 20px;
-      margin-bottom: 30px;
+      border: 1px solid rgba(255,255,255,0.12);
       border-radius: 16px;
-      backdrop-filter: blur(8px);
+      padding: 20px;
+      margin-bottom: 25px;
+      backdrop-filter: blur(10px);
     }
 
-    h1,h2,h3 {
+    .admin-title {
+      font-size: 22px;
+      font-weight: 700;
       margin-bottom: 10px;
     }
 
     .admin-input {
       width: 100%;
       padding: 12px;
-      margin: 8px 0 18px 0;
-      background: rgba(255,255,255,0.12);
       border-radius: 10px;
       border: none;
-      color: #fff;
+      margin-bottom: 14px;
+      background: rgba(255,255,255,0.15);
+      color: white;
       outline: none;
-    }
-
-    select.admin-input {
-      color: #fff;
     }
 
     .btn {
       padding: 12px 20px;
-      border-radius: 12px;
-      background: linear-gradient(45deg,#4d7dff,#ff4ad7);
+      background: linear-gradient(45deg, #4d7dff, #ff4ad7);
       border: none;
-      cursor: pointer;
-      font-size: 15px;
-      margin-top: 5px;
+      border-radius: 12px;
       color: white;
+      cursor: pointer;
+      margin-top: 10px;
     }
 
     .btn:hover {
-      opacity: .8;
+      opacity: 0.85;
     }
 
-    .server-row {
-      background: rgba(255,255,255,0.1);
-      padding: 12px;
-      border-radius: 12px;
-      margin-bottom: 12px;
+    .admin-section-label {
+      font-weight: 600;
+      margin-bottom: 5px;
+      display: block;
+      margin-top: 10px;
     }
 
+    /* Unauthorized screen */
     #lock-screen {
       text-align: center;
       margin-top: 100px;
       display: none;
     }
+
+    @media(max-width: 600px){
+      .admin-card { padding: 15px; }
+      .admin-title { font-size: 19px; }
+    }
   </style>
 </head>
 
-<body id="admin" data-page="admin">
+<body data-page="admin">
 
-<!-- HIDDEN ACCESS PROTECTION -->
-<div id="lock-screen">
-  <h2>Access Denied</h2>
-  <p>Invalid admin key.</p>
-</div>
+  <div id="global-bg"></div>
 
-<div id="admin-panel">
-
-  <h1>🔐 Ares Anime Admin Panel</h1>
-  <p>Manage anime, seasons, episodes & servers.</p>
-
-  <!-- ADD ANIME -->
-  <div class="admin-box">
-    <h2>➕ Add Anime</h2>
-
-    <input id="anime-title" class="admin-input" placeholder="Anime Title" />
-    <input id="anime-id" class="admin-input" placeholder="Anime ID (unique, no spaces)" />
-    <input id="anime-poster" class="admin-input" placeholder="Poster URL" />
-    <textarea id="anime-description" class="admin-input" placeholder="Description"></textarea>
-
-    <button class="btn" onclick="addAnime()">Save Anime</button>
+  <div id="lock-screen">
+    <h2>Access Denied</h2>
+    <p>Invalid admin key.</p>
   </div>
 
-  <!-- ADD SEASON -->
-  <div class="admin-box">
-    <h2>📁 Add Season</h2>
+  <div id="admin-panel" class="admin-wrapper">
 
-    <select id="season-anime-select" class="admin-input"></select>
-    <input id="season-name" class="admin-input" placeholder="Season Name (e.g. Season 1)" />
+    <h1 style="text-align:center;margin-bottom:25px;">🔐 Ares Anime – Admin Panel</h1>
 
-    <button class="btn" onclick="addSeason()">Add Season</button>
+    <!-- ADD ANIME -->
+    <div class="admin-card">
+      <div class="admin-title">➕ Add Anime</div>
+
+      <input id="anime-title" class="admin-input" placeholder="Anime Title">
+      <input id="anime-id" class="admin-input" placeholder="Anime ID (unique, no spaces)">
+      <input id="anime-poster" class="admin-input" placeholder="Poster URL">
+      <textarea id="anime-description" class="admin-input" placeholder="Description"></textarea>
+
+      <button class="btn" onclick="addAnime()">Save Anime</button>
+    </div>
+
+    <!-- ADD SEASON -->
+    <div class="admin-card">
+      <div class="admin-title">📁 Add Season</div>
+
+      <select id="season-anime-select" class="admin-input"></select>
+      <input id="season-name" class="admin-input" placeholder="Season Name (e.g. Season 1)">
+
+      <button class="btn" onclick="addSeason()">Add Season</button>
+    </div>
+
+    <!-- ADD EPISODE -->
+    <div class="admin-card">
+      <div class="admin-title">🎬 Add Episode</div>
+
+      <select id="episode-anime-select" class="admin-input" onchange="updateEpisodeSeasonDropdown()"></select>
+      <select id="episode-season-select" class="admin-input"></select>
+
+      <input id="ep-number" class="admin-input" type="number" placeholder="Episode Number">
+      <input id="ep-title" class="admin-input" placeholder="Episode Title">
+
+      <label class="admin-section-label">Streaming Servers</label>
+      <input id="stream-filemoon" class="admin-input" placeholder="Filemoon URL">
+      <input id="stream-streamtape" class="admin-input" placeholder="StreamTape URL">
+      <input id="stream-streamgh" class="admin-input" placeholder="StreamGH URL">
+
+      <label class="admin-section-label">Download Servers</label>
+      <input id="dl-filemoon" class="admin-input" placeholder="Filemoon Download URL">
+      <input id="dl-streamgh" class="admin-input" placeholder="StreamGH Download URL">
+
+      <button class="btn" onclick="addEpisode()">Add Episode</button>
+    </div>
+
+    <!-- GITHUB SAVE SETTINGS -->
+    <div class="admin-card">
+      <div class="admin-title">💾 Save to GitHub (Auto Deploy)</div>
+
+      <input id="github-owner" class="admin-input" placeholder="GitHub Owner (e.g. Goku55050)">
+      <input id="github-repo" class="admin-input" placeholder="Repository Name (e.g. Automatic-website-)">
+      <input id="github-branch" class="admin-input" value="main" placeholder="Branch (main)">
+      <input id="github-file-path" class="admin-input" value="animeData.json" placeholder="Path to File">
+      
+      <input id="github-token" class="admin-input" type="password" placeholder="GitHub Token (NOT SAVED)">
+      <button class="btn" onclick="saveToGitHub()">Save Changes to GitHub</button>
+    </div>
+
   </div>
 
-  <!-- ADD EPISODE -->
-  <div class="admin-box">
-    <h2>🎬 Add Episode</h2>
+  <script src="script.js"></script>
 
-    <select id="episode-anime-select" class="admin-input"></select>
-    <select id="episode-season-select" class="admin-input"></select>
+  <!-- ADMIN LOCK SYSTEM -->
+  <script>
+    const ADMIN_KEY = "ARES2025"; 
+    const key = new URLSearchParams(location.search).get("key");
 
-    <input id="ep-number" type="number" class="admin-input" placeholder="Episode Number" />
-    <input id="ep-title" class="admin-input" placeholder="Episode Title" />
-
-    <h3>Streaming Servers</h3>
-
-    <div class="server-row">
-      <label>Filemoon URL</label>
-      <input id="stream-filemoon" class="admin-input" placeholder="https://filemoon.to/e/...">
-    </div>
-
-    <div class="server-row">
-      <label>StreamTape URL</label>
-      <input id="stream-streamtape" class="admin-input" placeholder="https://streamtape.com/e/...">
-    </div>
-
-    <div class="server-row">
-      <label>StreamGH URL</label>
-      <input id="stream-streamgh" class="admin-input" placeholder="https://streamgh.com/e/...">
-    </div>
-
-    <h3>Download Servers</h3>
-
-    <div class="server-row">
-      <label>Filemoon DL</label>
-      <input id="dl-filemoon" class="admin-input" placeholder="https://filemoon.to/d/...">
-    </div>
-
-    <div class="server-row">
-      <label>StreamGH DL</label>
-      <input id="dl-streamgh" class="admin-input" placeholder="https://streamgh.com/d/...">
-    </div>
-
-    <button class="btn" onclick="addEpisode()">Add Episode</button>
-  </div>
-
-  <!-- GITHUB SAVE -->
-  <div class="admin-box">
-    <h2>💾 Save to GitHub (Auto Deploy)</h2>
-
-    <input id="github-owner" class="admin-input" placeholder="GitHub Owner (e.g. Goku55050)" />
-    <input id="github-repo" class="admin-input" placeholder="Repository Name (e.g. Automatic-website-)" />
-    <input id="github-branch" class="admin-input" placeholder="Branch (main)" value="main" />
-    <input id="github-file-path" class="admin-input" placeholder="animeData.json" value="animeData.json" />
-    <input id="github-token" class="admin-input" placeholder="GitHub Token (NOT SAVED)" type="password" />
-
-    <button class="btn" onclick="saveToGitHub()">Save Changes to GitHub</button>
-  </div>
-
-</div>
-
-<script src="script.js"></script>
-
-<script>
-/* ---------------------------------------
-   SIMPLE ADMIN LOCK
----------------------------------------- */
-const ADMIN_KEY = "ARES2025";  // You can change this
-const keyFromURL = window.location.search.replace("?key=", "");
-
-if (keyFromURL !== ADMIN_KEY) {
-  document.getElementById("admin-panel").style.display = "none";
-  document.getElementById("lock-screen").style.display = "block";
-}
-</script>
+    if (key !== ADMIN_KEY) {
+      document.getElementById("admin-panel").style.display = "none";
+      document.getElementById("lock-screen").style.display = "block";
+    }
+  </script>
 
 </body>
-      </html>
+</html>
