@@ -2,81 +2,121 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Ares Anime</title>
+    <title>Ares Anime – Watch Hindi Dubbed Anime Online</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Main Styles -->
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Favicon (optional) -->
+    <link rel="icon" type="image/png" href="favicon.png" />
   </head>
 
-  <body id="home" data-page="home">
-    <div class="stars-bg"></div>
-    <div id="ares-watermark">Ares Anime</div>
+  <body data-page="home">
+    <!-- Galaxy background is handled in style.css (same as your old index.html) -->
 
-    <!-- HEADER -->
-    <header class="main-header">
-      <div class="logo">
-        <span class="logo-top">Ares</span>
-        <span class="logo-bottom">Anime</span>
-      </div>
-      <nav class="nav">
-        <a href="index.html" class="nav-link active">Home</a>
-        <a href="browse.html" class="nav-link">Browse</a>
-      </nav>
-    </header>
-
-    <!-- HERO BANNER -->
-    <main class="main-content">
-      <section class="hero-banner">
-        <div class="hero-overlay"></div>
-        <div class="hero-bg">
-          <img id="hero-poster" src="" alt="Poster" />
-        </div>
-        <div class="hero-content">
-          <div class="hero-tag-pill" id="hero-tags">Loading…</div>
-          <h1 id="hero-title">Loading…</h1>
-          <p id="hero-subtitle"></p>
-          <button id="hero-watch-btn" class="btn-primary">
-            Watch Now
-          </button>
-        </div>
-      </section>
-
-      <!-- HOME SECTIONS -->
-      <section class="home-sections">
-        <div class="home-section">
-          <h2 class="section-title">Latest</h2>
-          <div id="latest-row" class="card-row"></div>
+    <!-- PAGE WRAPPER -->
+    <div class="page-wrapper">
+      <!-- HEADER / NAVBAR -->
+      <header class="site-header">
+        <div class="brand">
+          <span class="brand-line1">Ares</span>
+          <span class="brand-line2">Anime</span>
         </div>
 
-        <div class="home-section">
-          <h2 class="section-title">Popular</h2>
-          <div id="popular-row" class="card-row"></div>
-        </div>
+        <nav class="main-nav">
+          <a href="index.html" class="nav-link nav-link-active">Home</a>
+          <a href="browse.html" class="nav-link">Browse</a>
+        </nav>
+      </header>
 
-        <div class="home-section">
-          <h2 class="section-title">Trending</h2>
-          <div id="trending-row" class="card-row"></div>
-        </div>
-      </section>
+      <!-- MAIN CONTENT -->
+      <main class="home-main">
+        <!-- HERO BANNER (auto-changes every 6s via script.js) -->
+        <section id="hero-banner" class="hero-banner">
+          <div class="hero-inner">
+            <!-- Poster / Banner image -->
+            <div class="hero-media">
+              <img
+                id="hero-poster"
+                src=""
+                alt="Featured anime poster"
+                loading="lazy"
+              />
+            </div>
 
-      <!-- DISCLAIMER -->
-      <section class="disclaimer-wrapper">
-        <div class="disclaimer-box gradient-card">
-          <h3>Disclaimer</h3>
-          <p>
-            Ares Anime does not store any files on its own server.<br />
+            <!-- Text content -->
+            <div class="hero-content">
+              <div class="hero-pill" id="hero-pill">
+                <!-- e.g. “Hindi Dub • Updated” -->
+              </div>
+
+              <h1 id="hero-title" class="hero-title">Loading…</h1>
+
+              <p id="hero-meta" class="hero-meta">
+                <!-- e.g. “Season 1 • Hindi Dubbed • Shonen” -->
+              </p>
+
+              <p id="hero-description" class="hero-description">
+                <!-- Filled from animeData.json -->
+              </p>
+
+              <button id="hero-watch-btn" class="btn-primary hero-btn">
+                Watch Now
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- HOME SECTIONS -->
+        <!-- Latest -->
+        <section class="home-section">
+          <div class="section-header">
+            <h2>Latest</h2>
+          </div>
+          <div id="latest-row" class="anime-row">
+            <!-- Cards injected from script.js -->
+          </div>
+        </section>
+
+        <!-- Popular -->
+        <section class="home-section">
+          <div class="section-header">
+            <h2>Popular</h2>
+          </div>
+          <div id="popular-row" class="anime-row">
+            <!-- Cards injected from script.js -->
+          </div>
+        </section>
+
+        <!-- Trending -->
+        <section class="home-section">
+          <div class="section-header">
+            <h2>Trending</h2>
+          </div>
+          <div id="trending-row" class="anime-row">
+            <!-- Cards injected from script.js -->
+          </div>
+        </section>
+
+        <!-- DISCLAIMER -->
+        <section class="disclaimer-section">
+          <h2 class="disclaimer-title">Disclaimer</h2>
+          <p class="disclaimer-text">
+            Ares Anime does not store any files on its own server.
             We only index links from the internet hosted on third-party
-            servers.<br />
-            We index links just like Google.
+            servers. We index links just like Google.
           </p>
-        </div>
-      </section>
-    </main>
+        </section>
+      </main>
 
-    <!-- FOOTER -->
-    <footer class="main-footer">
-      <p>© 2025 Ares Anime. All Rights Reserved.</p>
-    </footer>
+      <!-- FOOTER -->
+      <footer class="site-footer">
+        <p>© 2025 Ares Anime. All Rights Reserved.</p>
+      </footer>
+    </div>
 
+    <!-- MAIN SCRIPT (handles hero rotation, sections, routing etc.) -->
     <script src="script.js"></script>
   </body>
-</html>
+          </html>
