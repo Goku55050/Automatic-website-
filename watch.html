@@ -2,87 +2,93 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Ares Anime – Watch</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ares Anime – Watch</title>
+
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body id="watch" data-page="watch">
+<body data-page="watch">
 
-  <!-- Galaxy Background -->
-  <div class="stars-bg"></div>
+  <!-- GLOBAL BACKGROUND -->
+  <div id="global-bg"></div>
 
-  <!-- HEADER -->
-  <header class="main-header">
-    <div class="logo">
-      <span class="logo-top">Ares</span>
-      <span class="logo-bottom">Anime</span>
-    </div>
-    <nav class="nav">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="browse.html" class="nav-link">Browse</a>
-    </nav>
-  </header>
+  <div class="page-wrapper">
 
-  <!-- MAIN -->
-  <main class="main-content watch-layout">
-
-    <!-- META -->
-    <section class="watch-meta">
-      <h1 id="watch-title">Loading…</h1>
-      <p id="watch-subtitle"></p>
-    </section>
-
-    <!-- PLAYER + SERVERS -->
-    <section class="watch-player">
-
-      <!-- SERVER BUTTONS -->
-      <div id="server-list" class="server-buttons">
-        <!-- Servers inserted via script.js -->
+    <!-- HEADER -->
+    <header class="site-header">
+      <div class="brand">
+        <span class="brand-line1">Ares</span>
+        <span class="brand-line2">Anime</span>
       </div>
+
+      <nav class="main-nav">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="browse.html" class="nav-link">Browse</a>
+      </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="watch-main">
+
+      <!-- TITLE -->
+      <section class="watch-meta">
+        <h1 id="watch-title" class="watch-title">Loading…</h1>
+        <p id="watch-subtitle" class="watch-subtitle"></p>
+      </section>
+
+      <!-- SERVERS -->
+      <section class="server-section">
+        <h2 class="section-title">Select Server</h2>
+        <div id="server-list" class="server-buttons">
+          <!-- Server buttons inserted by script.js -->
+        </div>
+      </section>
 
       <!-- VIDEO PLAYER -->
-      <div class="player-frame">
-        <iframe
-          id="video-player"
-          src=""
-          frameborder="0"
-          allowfullscreen
-          loading="lazy"
-        ></iframe>
-      </div>
+      <section class="player-section">
+        <div class="player-frame">
+          <iframe
+            id="video-player"
+            src=""
+            frameborder="0"
+            allowfullscreen
+            loading="lazy"
+          ></iframe>
+        </div>
+      </section>
 
       <!-- NEXT / PREVIOUS -->
-      <div class="next-prev">
+      <section class="np-section">
         <button id="prev-ep" class="btn-primary small-btn">Previous</button>
         <button id="next-ep" class="btn-primary small-btn">Next</button>
-      </div>
+      </section>
 
       <!-- DOWNLOAD BUTTON -->
-      <a id="download-btn" href="#" class="btn-primary download-btn">
-        Download Episode
-      </a>
+      <section class="download-entry">
+        <a id="download-btn" class="btn-primary download-btn">
+          Download Episode
+        </a>
+      </section>
 
-    </section>
-
-    <!-- DISCLAIMER -->
-    <section class="disclaimer-section">
-      <div class="disclaimer-box gradient-card">
-        <h3>Disclaimer</h3>
-        <p>
+      <!-- DISCLAIMER -->
+      <section class="disclaimer-section">
+        <h2 class="disclaimer-title">Disclaimer</h2>
+        <p class="disclaimer-text">
           Videos are hosted on third-party servers.  
           Ares Anime does not store any files.
         </p>
-      </div>
-    </section>
+      </section>
 
-  </main>
+    </main>
 
-  <!-- FOOTER -->
-  <footer class="main-footer">
-    <p>© 2025 Ares Anime</p>
-  </footer>
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <p>© 2025 Ares Anime</p>
+    </footer>
+
+  </div>
 
   <script src="script.js"></script>
 </body>
-  </html>
+          </html>
