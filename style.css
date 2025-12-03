@@ -1,0 +1,394 @@
+/* ===========================================================
+   GLOBAL THEME
+=========================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #090b20;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
+
+img {
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* ===========================================================
+   HEADER / NAVBAR
+=========================================================== */
+.main-header {
+    width: 100%;
+    background: rgba(0,0,0,0.35);
+    backdrop-filter: blur(10px);
+    padding: 18px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 20px;
+    color: #9dbeff;
+}
+
+.logo span {
+    font-size: 14px;
+    opacity: .9;
+}
+
+nav a {
+    color: #d6d9ff;
+    margin-left: 22px;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 6px 14px;
+    border-radius: 10px;
+}
+
+nav a.active {
+    border: 2px solid #6c8cff;
+}
+
+/* ===========================================================
+   HERO SLIDER
+=========================================================== */
+.hero-slider {
+    width: 94%;
+    margin: 20px auto;
+    height: 420px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 22px;
+}
+
+.hero-track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform .7s cubic-bezier(.25,.46,.45,.94);
+}
+
+.hero-slide {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.hero-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(.55);
+    border-radius: 22px;
+}
+
+.hero-overlay {
+    position: absolute;
+    bottom: 45px;
+    left: 25px;
+}
+
+.hero-tag {
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(6px);
+    padding: 6px 14px;
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+.hero-title {
+    font-size: 36px;
+    font-weight: 700;
+    margin-top: 12px;
+}
+
+.hero-btn {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 12px 22px;
+    background: linear-gradient(90deg,#6168ff,#c24fff);
+    border-radius: 12px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Slider arrows */
+.hero-btn.left,
+.hero-btn.right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.4);
+    padding: 10px 14px;
+    border-radius: 50%;
+    font-size: 22px;
+    cursor: pointer;
+    border: none;
+}
+
+.hero-btn.left {
+    left: 12px;
+}
+
+.hero-btn.right {
+    right: 12px;
+}
+
+/* ===========================================================
+   HOME – SECTIONS
+=========================================================== */
+.section-block {
+    width: 100%;
+    padding-top: 10px;
+}
+
+.section-title {
+    margin-left: 20px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.anime-row {
+    display: flex;
+    overflow-x: auto;
+    gap: 16px;
+    padding: 15px 20px;
+}
+
+.anime-card {
+    flex-shrink: 0;
+    width: 150px;
+}
+
+.anime-card img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.anime-title {
+    margin-top: 8px;
+    font-size: 14px;
+    opacity: .85;
+}
+
+/* ===========================================================
+   EPISODES PAGE
+=========================================================== */
+.episode-hero {
+    width: 94%;
+    height: 330px;
+    margin: 20px auto;
+    position: relative;
+    border-radius: 22px;
+    overflow: hidden;
+}
+
+#episodePoster {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(.55);
+}
+
+.episode-hero-info {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+}
+
+.season-label {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+#seasonSelect {
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    margin-left: 6px;
+}
+
+.episode-list {
+    padding: 20px;
+}
+
+.episode-card {
+    background: rgba(255,255,255,0.06);
+    margin-bottom: 14px;
+    padding: 14px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.btn-primary {
+    padding: 10px 16px;
+    background: linear-gradient(90deg,#5b69ff,#c94fff);
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* ===========================================================
+   WATCH PAGE
+=========================================================== */
+.watch-container {
+    width: 94%;
+    margin: 20px auto;
+}
+
+.video-frame {
+    width: 100%;
+    height: 220px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+@media(min-width: 700px) {
+    .video-frame {
+        height: 420px;
+    }
+}
+
+#videoPlayer {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.watch-buttons, .watch-controls {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.nav-btn {
+    padding: 10px 14px;
+    background: #2c2f47;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* ===========================================================
+   DOWNLOAD PAGE
+=========================================================== */
+.download-container {
+    width: 94%;
+    margin: 20px auto;
+}
+
+.download-box {
+    background: rgba(255,255,255,0.06);
+    padding: 20px;
+    margin-top: 16px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.download-links a {
+    display: block;
+    padding: 12px 16px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background: linear-gradient(90deg,#5b69ff,#be4fff);
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+/* ===========================================================
+   BROWSE PAGE
+=========================================================== */
+.browse-search {
+    width: 94%;
+    margin: 25px auto 10px;
+}
+
+.browse-search-input {
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    font-size: 16px;
+}
+
+.browse-grid {
+    width: 94%;
+    margin: 10px auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 18px;
+}
+
+.browse-card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.browse-title {
+    margin-top: 8px;
+    font-size: 14px;
+    opacity: .85;
+}
+
+/* ===========================================================
+   ADMIN PANEL
+=========================================================== */
+.admin-container {
+    padding-bottom: 40px;
+}
+
+.admin-card {
+    background: rgba(255,255,255,0.06);
+    border-radius: 14px;
+    padding: 18px;
+    margin-bottom: 20px;
+}
+
+/* Lock screen */
+#lockScreen {
+    margin-top: 100px;
+    text-align: center;
+}
+
+/* ===========================================================
+   FOOTER + DISCLAIMER
+=========================================================== */
+.footer {
+    width: 100%;
+    margin-top: 40px;
+    padding: 30px 20px;
+    text-align: center;
+    opacity: .75;
+}
+
+.footer h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.copy {
+    margin-top: 10px;
+    font-size: 14px;
+    opacity: 0.8;
+}
