@@ -178,6 +178,118 @@
                 "url": "https://hglink.to/e/rzobusatmqn5"
               }
             ]
+          },
+          {
+            "number": 7,
+            "title": "Assault",
+            "stream_servers": [
+              {
+                "name": "Filemoon",
+                "url": "https://filemoon.art/e/73f7wesvriws/AresAnime_JJK_E07_Hindi.mp4"
+              },
+              {
+                "name": "StreamTape",
+                "url": "https://streamtape.com/e/D0MJa2ZkwXTkKpl"
+              },
+              {
+                "name": "StreamGH",
+                "url": "https://hglink.to/e/6kn2ttkk80e1"
+              }
+            ],
+            "download_servers": [
+              {
+                "name": "Filemoon DL",
+                "url": "https://filemoon.art/download/73f7wesvriws/AresAnime_JJK_E07_Hindi.mp4"
+              },
+              {
+                "name": "StreamGH DL",
+                "url": "https://hglink.to/download/6kn2ttkk80e1"
+              }
+            ]
+          },
+          {
+            "number": 8,
+            "title": "Boredom",
+            "stream_servers": [
+              {
+                "name": "Filemoon",
+                "url": "https://filemoon.to/e/p1cw53ily4n4"
+              },
+              {
+                "name": "StreamTape",
+                "url": "https://streamtape.com/e/PkVRzm09V7C0vlZ"
+              },
+              {
+                "name": "StreamGH",
+                "url": "https://hglink.to/e/wpoe44w6b5z0"
+              }
+            ],
+            "download_servers": [
+              {
+                "name": "Filemoon DL",
+                "url": "https://filemoon.to/download/p1cw53ily4n4"
+              },
+              {
+                "name": "StreamGH DL",
+                "url": "https://hglink.to/e/wpoe44w6b5z0"
+              }
+            ]
+          },
+          {
+            "number": 9,
+            "title": "Small Fry and Reverse Retribution",
+            "stream_servers": [
+              {
+                "name": "Filemoon",
+                "url": "https://filemoon.to/e/7d3h64lmsp57"
+              },
+              {
+                "name": "StreamTape",
+                "url": "https://streamtape.com/e/9O4J9GwpQVfAYe"
+              },
+              {
+                "name": "StreamGH",
+                "url": "https://hglink.to/e/u006qkomy2bd"
+              }
+            ],
+            "download_servers": [
+              {
+                "name": "Filemoon DL",
+                "url": "https://filemoon.to/download/7d3h64lmsp57"
+              },
+              {
+                "name": "StreamGH DL",
+                "url": "https://hglink.to/download/u006qkomy2bd"
+              }
+            ]
+          },
+          {
+            "number": 10,
+            "title": "Idle Transfiguration",
+            "stream_servers": [
+              {
+                "name": "Filemoon",
+                "url": "https://filemoon.to/e/7xhoik3sxnkx"
+              },
+              {
+                "name": "StreamTape",
+                "url": "https://streamtape.com/e/3dobMpdkOrHdQq8"
+              },
+              {
+                "name": "StreamGH",
+                "url": "https://hglink.to/e/6uo1r7ohz6l2"
+              }
+            ],
+            "download_servers": [
+              {
+                "name": "Filemoon DL",
+                "url": "https://filemoon.to/download/7xhoik3sxnkx"
+              },
+              {
+                "name": "StreamGH DL",
+                "url": "https://hglink.to/download/6uo1r7ohz6l2"
+              }
+            ]
           }
         ]
       }
