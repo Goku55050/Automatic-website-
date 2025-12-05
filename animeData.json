@@ -787,80 +787,210 @@
           {
             "number": 1,
             "title": "The End of the Beginning and the Beginning of the End",
-            "stream_servers": [],
-            "download_servers": []
+            "stream_servers": [
+              {
+                "name": "Filemoon",
+                "url": "https://filemoon.to/e/7ew2r8i2fblz/AresAnime_ReZero_S1_E01_Hindi.mp4"
+              }
+            ],
+            "download_servers": [
+              {
+                "name": "Filemoon DL",
+                "url": "https://filemoon.to/download/7ew2r8i2fblz/AresAnime_ReZero_S1_E01_Hindi.mp4"
+              }
+            ]
           },
           {
             "number": 2,
             "title": "Reunion with the Witch",
-            "stream_servers": [],
-            "download_servers": []
+            "stream_servers": [
+              {
+                "name": "Filemoon",
+                "url": "https://filemoon.to/e/334lsxcuqn71/AresAnime_ReZero_S1_E02_Hindi.mp4"
+              }
+            ],
+            "download_servers": [
+              {
+                "name": "Filemoon DL",
+                "url": "https://filemoon.to/download/334lsxcuqn71/AresAnime_ReZero_S1_E02_Hindi.mp4"
+              }
+            ]
           },
           {
             "number": 3,
             "title": "Starting Life from Zero in Another World",
-            "stream_servers": [],
-            "download_servers": []
+            "stream_servers": [
+              {
+                "name": "Filemoon",
+                "url": "https://filemoon.to/e/ilkj0f9n97ys/AresAnime_ReZero_S1_E03_Hindi.mp4"
+              }
+            ],
+            "download_servers": [
+              {
+                "name": "Filemoon DL",
+                "url": "https://filemoon.to/download/ilkj0f9n97ys/AresAnime_ReZero_S1_E03_Hindi.mp4"
+              }
+            ]
           },
           {
             "number": 4,
             "title": "The Happy Roswaal Mansion Family",
-            "stream_servers": [],
-            "download_servers": []
+            "stream_servers": [
+              {
+                "name": "Filemoon",
+                "url": "https://filemoon.to/e/4a638322rjma/AresAnime_ReZero_S1_E04_Hindi.mp4"
+              }
+            ],
+            "download_servers": [
+              {
+                "name": "Filemoon DL",
+                "url": "https://filemoon.to/download/4a638322rjma/AresAnime_ReZero_S1_E04_Hindi.mp4"
+              }
+            ]
           },
           {
             "number": 5,
             "title": "The Sound of Chains",
-            "stream_servers": [],
-            "download_servers": []
+            "stream_servers": [
+              {
+                "name": "Filemoon",
+                "url": "https://filemoon.to/e/gm390wrcypfb/AresAnime_ReZero_S1_E05_Hindi.mp4"
+              }
+            ],
+            "download_servers": [
+              {
+                "name": "Filemoon DL",
+                "url": "https://filemoon.to/download/gm390wrcypfb/AresAnime_ReZero_S1_E05_Hindi.mp4"
+              }
+            ]
           },
           {
             "number": 6,
             "title": "The Meaning of Courage",
-            "stream_servers": [],
-            "download_servers": []
+            "stream_servers": [
+              {
+                "name": "Filemoon",
+                "url": "https://filemoon.to/e/fnil97zzsbf0/AresAnime_ReZero_S1_E06_Hindi.mp4"
+              }
+            ],
+            "download_servers": [
+              {
+                "name": "Filemoon DL",
+                "url": "https://filemoon.to/download/fnil97zzsbf0/AresAnime_ReZero_S1_E06_Hindi.mp4"
+              }
+            ]
           },
           {
             "number": 7,
             "title": "Fanatical Princess",
-            "stream_servers": [],
-            "download_servers": []
+            "stream_servers": [
+              {
+                "name": "Filemoon",
+                "url": "https://filemoon.to/e/9d1mvfdkfdev/AresAnime_ReZero_S1_E07_Hindi.mp4"
+              }
+            ],
+            "download_servers": [
+              {
+                "name": "Filemoon DL",
+                "url": "https://filemoon.to/download/9d1mvfdkfdev/AresAnime_ReZero_S1_E07_Hindi.mp4"
+              }
+            ]
           },
           {
             "number": 8,
             "title": "Self-Proclaimed Knight Natsuki Subaru",
-            "stream_servers": [],
-            "download_servers": []
+            "stream_servers": [
+              {
+                "name": "Filemoon",
+                "url": "https://filemoon.to/e/dhl0l5ttv4ma/AresAnime_ReZero_S1_E08_Hindi.mp4"
+              }
+            ],
+            "download_servers": [
+              {
+                "name": "Filemoon DL",
+                "url": "https://filemoon.to/download/dhl0l5ttv4ma/AresAnime_ReZero_S1_E08_Hindi.mp4"
+              }
+            ]
           },
           {
             "number": 9,
             "title": "The Sickness Called Despair",
-            "stream_servers": [],
-            "download_servers": []
+            "stream_servers": [
+              {
+                "name": "Filemoon",
+                "url": "https://filemoon.to/e/25khqt6shfr7/AresAnime_ReZero_S1_E09_Hindi.mp4"
+              }
+            ],
+            "download_servers": [
+              {
+                "name": "Filemoon DL",
+                "url": "https://filemoon.to/download/25khqt6shfr7/AresAnime_ReZero_S1_E09_Hindi.mp4"
+              }
+            ]
           },
           {
             "number": 10,
             "title": "The Greed of a Pig",
-            "stream_servers": [],
-            "download_servers": []
+            "stream_servers": [
+              {
+                "name": "Filemoon",
+                "url": "https://filemoon.to/e/wugrm69myla2/AresAnime_ReZero_S1_E10_Hindi.mp4"
+              }
+            ],
+            "download_servers": [
+              {
+                "name": "Filemoon DL",
+                "url": "https://filemoon.to/download/wugrm69myla2/AresAnime_ReZero_S1_E10_Hindi.mp4"
+              }
+            ]
           },
           {
             "number": 11,
             "title": "From Zero",
-            "stream_servers": [],
-            "download_servers": []
+            "stream_servers": [
+              {
+                "name": "Filemoon",
+                "url": "https://filemoon.to/e/u13jlwm4gnjz/AresAnime_ReZero_S1_E11_Hindi.mp4"
+              }
+            ],
+            "download_servers": [
+              {
+                "name": "Filemoon DL",
+                "url": "https://filemoon.to/download/u13jlwm4gnjz/AresAnime_ReZero_S1_E11_Hindi.mp4"
+              }
+            ]
           },
           {
             "number": 12,
             "title": "Wilhelm van Astrea",
-            "stream_servers": [],
-            "download_servers": []
+            "stream_servers": [
+              {
+                "name": "Filemoon",
+                "url": "https://filemoon.to/e/ym0vkg4elfzr/AresAnime_ReZero_S1_E12_Hindi.mp4"
+              }
+            ],
+            "download_servers": [
+              {
+                "name": "Filemoon DL",
+                "url": "https://filemoon.to/download/ym0vkg4elfzr/AresAnime_ReZero_S1_E12_Hindi.mp4"
+              }
+            ]
           },
           {
             "number": 13,
             "title": "That’s All This Story Is About",
-            "stream_servers": [],
-            "download_servers": []
+            "stream_servers": [
+              {
+                "name": "Filemoon",
+                "url": "https://filemoon.to/e/2rr0g3q5jb7v/AresAnime_ReZero_S1_E13_Hindi.mp4"
+              }
+            ],
+            "download_servers": [
+              {
+                "name": "Filemoon DL",
+                "url": "https://filemoon.to/download/2rr0g3q5jb7v/AresAnime_ReZero_S1_E13_Hindi.mp4"
+              }
+            ]
           }
         ]
       }
