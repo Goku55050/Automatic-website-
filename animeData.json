@@ -1219,80 +1219,210 @@
           {
             "number": 1,
             "title": "The Fool",
-            "stream_servers": [],
-            "download_servers": []
+            "stream_servers": [
+              {
+                "name": "Filemoon",
+                "url": "https://filemoon.to/e/fzi35aqb74c0/AresAnime__Lord-of-mystries__S1_E01_Hindi.mp4"
+              }
+            ],
+            "download_servers": [
+              {
+                "name": "Filemoon DL",
+                "url": "https://filemoon.to/download/fzi35aqb74c0/AresAnime__Lord-of-mystries__S1_E01_Hindi.mp4"
+              }
+            ]
           },
           {
             "number": 2,
             "title": "Beyonder",
-            "stream_servers": [],
-            "download_servers": []
+            "stream_servers": [
+              {
+                "name": "Filemoon",
+                "url": "https://filemoon.to/e/zj43auuwo68r/AresAnime__Lord-of-mystries__S1_E02_Hindi.mp4"
+              }
+            ],
+            "download_servers": [
+              {
+                "name": "Filemoon DL",
+                "url": "https://filemoon.to/download/zj43auuwo68r/AresAnime__Lord-of-mystries__S1_E02_Hindi.mp4"
+              }
+            ]
           },
           {
             "number": 3,
             "title": "The Notebook",
-            "stream_servers": [],
-            "download_servers": []
+            "stream_servers": [
+              {
+                "name": "Filemoon",
+                "url": "https://filemoon.to/e/7a9x529cazyq/AresAnime__Lord-of-mystries__S1_E03_Hindi.mp4"
+              }
+            ],
+            "download_servers": [
+              {
+                "name": "Filemoon DL",
+                "url": "https://filemoon.to/download/7a9x529cazyq/AresAnime__Lord-of-mystries__S1_E03_Hindi.mp4"
+              }
+            ]
           },
           {
             "number": 4,
             "title": "Magic Mirror",
-            "stream_servers": [],
-            "download_servers": []
+            "stream_servers": [
+              {
+                "name": "Filemoon",
+                "url": "https://filemoon.to/e/udq0p4h43pr4/AresAnime__Lord-of-mystries__S1_E04_Hindi.mp4"
+              }
+            ],
+            "download_servers": [
+              {
+                "name": "Filemoon DL",
+                "url": "https://filemoon.to/download/udq0p4h43pr4/AresAnime__Lord-of-mystries__S1_E04_Hindi.mp4"
+              }
+            ]
           },
           {
             "number": 5,
             "title": "Hero",
-            "stream_servers": [],
-            "download_servers": []
+            "stream_servers": [
+              {
+                "name": "Filemoon",
+                "url": "https://filemoon.to/e/ggr4mkpbqwai/AresAnime__Lord-of-mystries__S1_E05_Hindi.mp4"
+              }
+            ],
+            "download_servers": [
+              {
+                "name": "Filemoon DL",
+                "url": "https://filemoon.to/download/ggr4mkpbqwai/AresAnime__Lord-of-mystries__S1_E05_Hindi.mp4"
+              }
+            ]
           },
           {
             "number": 6,
             "title": "Teacher",
-            "stream_servers": [],
-            "download_servers": []
+            "stream_servers": [
+              {
+                "name": "Filemoon",
+                "url": "https://filemoon.to/e/n37hg1glr3t3/AresAnime__Lord-of-mystries__S1_E06_Hindi.mp4"
+              }
+            ],
+            "download_servers": [
+              {
+                "name": "Filemoon DL",
+                "url": "https://filemoon.to/download/n37hg1glr3t3/AresAnime__Lord-of-mystries__S1_E06_Hindi.mp4"
+              }
+            ]
           },
           {
             "number": 7,
             "title": "Coincidence",
-            "stream_servers": [],
-            "download_servers": []
+            "stream_servers": [
+              {
+                "name": "Filemoon",
+                "url": "https://filemoon.to/e/13z5j2vk8fd7/AresAnime__Lord-of-mystries__S1_E07_Hindi.mp4"
+              }
+            ],
+            "download_servers": [
+              {
+                "name": "Filemoon DL",
+                "url": "https://filemoon.to/download/13z5j2vk8fd7/AresAnime__Lord-of-mystries__S1_E07_Hindi.mp4"
+              }
+            ]
           },
           {
             "number": 8,
             "title": "Losing Control",
-            "stream_servers": [],
-            "download_servers": []
+            "stream_servers": [
+              {
+                "name": "Filemoon",
+                "url": "https://filemoon.to/e/6e0gss1xi1e5/AresAnime__Lord-of-mystries__S1_E08_Hindi.mp4"
+              }
+            ],
+            "download_servers": [
+              {
+                "name": "Filemoon DL",
+                "url": "https://filemoon.to/download/6e0gss1xi1e5/AresAnime__Lord-of-mystries__S1_E08_Hindi.mp4"
+              }
+            ]
           },
           {
             "number": 9,
             "title": "Party",
-            "stream_servers": [],
-            "download_servers": []
+            "stream_servers": [
+              {
+                "name": "Filemoon",
+                "url": "https://filemoon.to/e/az5lzxod56dz/AresAnime__Lord-of-mystries__S1_E09_Hindi.mp4"
+              }
+            ],
+            "download_servers": [
+              {
+                "name": "Filemoon DL",
+                "url": "https://filemoon.to/download/az5lzxod56dz/AresAnime__Lord-of-mystries__S1_E09_Hindi.mp4"
+              }
+            ]
           },
           {
             "number": 10,
             "title": "Clue",
-            "stream_servers": [],
-            "download_servers": []
+            "stream_servers": [
+              {
+                "name": "Filemoon",
+                "url": "https://filemoon.to/e/w03gf9h5gq6n/AresAnime__Lord-of-mystries__S1_E10_Hindi.mp4"
+              }
+            ],
+            "download_servers": [
+              {
+                "name": "Filemoon DL",
+                "url": "https://filemoon.to/download/w03gf9h5gq6n/AresAnime__Lord-of-mystries__S1_E10_Hindi.mp4"
+              }
+            ]
           },
           {
             "number": 11,
             "title": "The Mastermind",
-            "stream_servers": [],
-            "download_servers": []
+            "stream_servers": [
+              {
+                "name": "Filemoon",
+                "url": "https://filemoon.to/e/bnhudlanv8ot/AresAnime__Lord-of-mystries__S1_E11_Hindi.mp4"
+              }
+            ],
+            "download_servers": [
+              {
+                "name": "Filemoon DL",
+                "url": "https://filemoon.to/download/bnhudlanv8ot/AresAnime__Lord-of-mystries__S1_E11_Hindi.mp4"
+              }
+            ]
           },
           {
             "number": 12,
             "title": "The Bomb",
-            "stream_servers": [],
-            "download_servers": []
+            "stream_servers": [
+              {
+                "name": "Filemoon",
+                "url": "https://filemoon.to/e/k2l8y7exqhxd/AresAnime__Lord-of-mystries__S1_E12_Hindi.mp4"
+              }
+            ],
+            "download_servers": [
+              {
+                "name": "Filemoon DL",
+                "url": "https://filemoon.to/download/k2l8y7exqhxd/AresAnime__Lord-of-mystries__S1_E12_Hindi.mp4"
+              }
+            ]
           },
           {
             "number": 13,
             "title": "The Light",
-            "stream_servers": [],
-            "download_servers": []
+            "stream_servers": [
+              {
+                "name": "Filemoon",
+                "url": "https://filemoon.to/e/50z5ovmkhzhs/AresAnime__Lord-of-mystries__S1_E13_Hindi.mp4"
+              }
+            ],
+            "download_servers": [
+              {
+                "name": "Filemoon DL",
+                "url": "https://filemoon.to/download/50z5ovmkhzhs/AresAnime__Lord-of-mystries__S1_E13_Hindi.mp4"
+              }
+            ]
           }
         ]
       }
