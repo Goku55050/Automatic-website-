@@ -1651,7 +1651,116 @@
     "seasons": [
       {
         "name": "Season 1",
-        "episodes": []
+        "episodes": [
+          {
+            "number": 1,
+            "title": "A Peacetime Reward: Who Gets the 100,000,000 Zeni?!",
+            "stream_servers": [],
+            "download_servers": []
+          },
+          {
+            "number": 2,
+            "title": "To the Promised Resort! Vegeta Takes a Family Trip!",
+            "stream_servers": [],
+            "download_servers": []
+          },
+          {
+            "number": 3,
+            "title": "Where Does the Dream Pick Up? Find the Super Saiyan God!",
+            "stream_servers": [],
+            "download_servers": []
+          },
+          {
+            "number": 4,
+            "title": "Bid for the Dragon Balls! Pilaf and Crew's Impossible Mission!",
+            "stream_servers": [],
+            "download_servers": []
+          },
+          {
+            "number": 5,
+            "title": "Showdown on King Kai's World! Goku vs. Beerus the Destroyer",
+            "stream_servers": [],
+            "download_servers": []
+          },
+          {
+            "number": 6,
+            "title": "Don't Anger the Destroyer! A Heart-Pounding Birthday Party",
+            "stream_servers": [],
+            "download_servers": []
+          },
+          {
+            "number": 7,
+            "title": "How Dare You Do That to My Bulma! Vegeta's Metamorphosis of Fury?",
+            "stream_servers": [],
+            "download_servers": []
+          },
+          {
+            "number": 8,
+            "title": "Goku Steps Up! The Last Chance from Lord Beerus?",
+            "stream_servers": [],
+            "download_servers": []
+          },
+          {
+            "number": 9,
+            "title": "Thanks for Waiting, Lord Beerus! A Super Saiyan God is Born at Last!",
+            "stream_servers": [],
+            "download_servers": []
+          },
+          {
+            "number": 10,
+            "title": "Show Us, Goku! The Power of a Super Saiyan God!",
+            "stream_servers": [],
+            "download_servers": []
+          },
+          {
+            "number": 11,
+            "title": "lLet's Keep Going, Lord Beerus! The Battle of Gods!",
+            "stream_servers": [],
+            "download_servers": []
+          },
+          {
+            "number": 12,
+            "title": "The Universe Will Shatter? Clash! Destroyer vs. Super Saiyan God!",
+            "stream_servers": [],
+            "download_servers": []
+          },
+          {
+            "number": 13,
+            "title": "Goku, Surpass the Super Saiyan God!",
+            "stream_servers": [],
+            "download_servers": []
+          },
+          {
+            "number": 14,
+            "title": "This is Every Ounce of My Power! The Conclusion of the Battle of Gods!",
+            "stream_servers": [],
+            "download_servers": []
+          },
+          {
+            "number": 15,
+            "title": "Valiant Mr. Satan, Work a Miracle! A Challenge from Outer Space!",
+            "stream_servers": [],
+            "download_servers": []
+          },
+          {
+            "number": 16,
+            "title": "Vegeta Becomes a Pupil?! Take Down Whis!",
+            "stream_servers": [],
+            "download_servers": []
+          },
+          {
+            "number": 17,
+            "title": "Pan is Born! And Goku Goes on a Training Journey?!",
+            "stream_servers": [],
+            "download_servers": []
+          },
+          {
+            "number": 18,
+            "title": "I'm Here, Too! Training Begins on Beerus' World!",
+            "stream_servers": [],
+            "download_servers": []
+          }
+        ]
       }
     ]
   }
